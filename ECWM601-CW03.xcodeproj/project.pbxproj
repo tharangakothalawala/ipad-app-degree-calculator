@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49A54CE01742694B00FE3A59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CDF1742694B00FE3A59 /* UIKit.framework */; };
+		49A54CE21742694B00FE3A59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE11742694B00FE3A59 /* Foundation.framework */; };
+		49A54CE41742694B00FE3A59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE31742694B00FE3A59 /* CoreGraphics.framework */; };
+		49A54CE61742694B00FE3A59 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE51742694B00FE3A59 /* CoreData.framework */; };
+		49A54CEC1742694B00FE3A59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A54CEA1742694B00FE3A59 /* InfoPlist.strings */; };
+		49A54CEE1742694B00FE3A59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CED1742694B00FE3A59 /* main.m */; };
+		49A54CF21742694B00FE3A59 /* ReportCardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CF11742694B00FE3A59 /* ReportCardAppDelegate.m */; };
+		49A54CF51742694B00FE3A59 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A54CF31742694B00FE3A59 /* MainStoryboard.storyboard */; };
+		49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */; };
+		49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */; };
+		49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49A54CDB1742694B00FE3A59 /* ECWM601-CW03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECWM601-CW03.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A54CDF1742694B00FE3A59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		49A54CE11742694B00FE3A59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49A54CE31742694B00FE3A59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		49A54CE51742694B00FE3A59 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		49A54CE91742694B00FE3A59 /* ECWM601-CW03-Info.plist */ = {isa = PBXFileReference; path = "ECWM601-CW03-Info.plist"; sourceTree = "<group>"; };
+		49A54CEB1742694B00FE3A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49A54CED1742694B00FE3A59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49A54CEF1742694B00FE3A59 /* ECWM601-CW03-Prefix.pch */ = {isa = PBXFileReference; path = "ECWM601-CW03-Prefix.pch"; sourceTree = "<group>"; };
+		49A54CF01742694B00FE3A59 /* ReportCardAppDelegate.h */ = {isa = PBXFileReference; path = ReportCardAppDelegate.h; sourceTree = "<group>"; };
+		49A54CF11742694B00FE3A59 /* ReportCardAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardAppDelegate.m; sourceTree = "<group>"; };
+		49A54CF41742694B00FE3A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		49A54CF71742694B00FE3A59 /* ECWM601_CW03.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ECWM601_CW03.xcdatamodel; sourceTree = "<group>"; };
+		49A54CF91742694B00FE3A59 /* ReportCardMasterViewController.h */ = {isa = PBXFileReference; path = ReportCardMasterViewController.h; sourceTree = "<group>"; };
+		49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardMasterViewController.m; sourceTree = "<group>"; };
+		49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */ = {isa = PBXFileReference; path = ReportCardDetailViewController.h; sourceTree = "<group>"; };
+		49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49A54CD81742694B00FE3A59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A54CE01742694B00FE3A59 /* UIKit.framework in Frameworks */,
+				49A54CE21742694B00FE3A59 /* Foundation.framework in Frameworks */,
+				49A54CE41742694B00FE3A59 /* CoreGraphics.framework in Frameworks */,
+				49A54CE61742694B00FE3A59 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49A54CD01742694B00FE3A59 = {
+			isa = PBXGroup;
+			children = (
+				49A54CE71742694B00FE3A59 /* ECWM601-CW03 */,
+				49A54CDE1742694B00FE3A59 /* Frameworks */,
+				49A54CDC1742694B00FE3A59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49A54CDC1742694B00FE3A59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49A54CDB1742694B00FE3A59 /* ECWM601-CW03.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49A54CDE1742694B00FE3A59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A54CDF1742694B00FE3A59 /* UIKit.framework */,
+				49A54CE11742694B00FE3A59 /* Foundation.framework */,
+				49A54CE31742694B00FE3A59 /* CoreGraphics.framework */,
+				49A54CE51742694B00FE3A59 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49A54CE71742694B00FE3A59 /* ECWM601-CW03 */ = {
+			isa = PBXGroup;
+			children = (
+				49A54CF01742694B00FE3A59 /* ReportCardAppDelegate.h */,
+				49A54CF11742694B00FE3A59 /* ReportCardAppDelegate.m */,
+				49A54CF31742694B00FE3A59 /* MainStoryboard.storyboard */,
+				49A54CF91742694B00FE3A59 /* ReportCardMasterViewController.h */,
+				49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */,
+				49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */,
+				49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */,
+				49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */,
+				49A54CE81742694B00FE3A59 /* Supporting Files */,
+			);
+			path = "ECWM601-CW03";
+			sourceTree = "<group>";
+		};
+		49A54CE81742694B00FE3A59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49A54CE91742694B00FE3A59 /* ECWM601-CW03-Info.plist */,
+				49A54CEA1742694B00FE3A59 /* InfoPlist.strings */,
+				49A54CED1742694B00FE3A59 /* main.m */,
+				49A54CEF1742694B00FE3A59 /* ECWM601-CW03-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49A54CDA1742694B00FE3A59 /* ECWM601-CW03 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A54D011742694B00FE3A59 /* Build configuration list for PBXNativeTarget "ECWM601-CW03" */;
+			buildPhases = (
+				49A54CD71742694B00FE3A59 /* Sources */,
+				49A54CD81742694B00FE3A59 /* Frameworks */,
+				49A54CD91742694B00FE3A59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ECWM601-CW03";
+			productName = "ECWM601-CW03";
+			productReference = 49A54CDB1742694B00FE3A59 /* ECWM601-CW03.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49A54CD21742694B00FE3A59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 49A54CD51742694B00FE3A59 /* Build configuration list for PBXProject "ECWM601-CW03" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49A54CD01742694B00FE3A59;
+			productRefGroup = 49A54CDC1742694B00FE3A59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49A54CDA1742694B00FE3A59 /* ECWM601-CW03 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49A54CD91742694B00FE3A59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A54CEC1742694B00FE3A59 /* InfoPlist.strings in Resources */,
+				49A54CF51742694B00FE3A59 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49A54CD71742694B00FE3A59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49A54CEE1742694B00FE3A59 /* main.m in Sources */,
+				49A54CF21742694B00FE3A59 /* ReportCardAppDelegate.m in Sources */,
+				49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */,
+				49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */,
+				49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49A54CEA1742694B00FE3A59 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A54CEB1742694B00FE3A59 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49A54CF31742694B00FE3A59 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A54CF41742694B00FE3A59 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49A54CFF1742694B00FE3A59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		49A54D001742694B00FE3A59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49A54D021742694B00FE3A59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ECWM601-CW03/ECWM601-CW03-Prefix.pch";
+				INFOPLIST_FILE = "ECWM601-CW03/ECWM601-CW03-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49A54D031742694B00FE3A59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ECWM601-CW03/ECWM601-CW03-Prefix.pch";
+				INFOPLIST_FILE = "ECWM601-CW03/ECWM601-CW03-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49A54CD51742694B00FE3A59 /* Build configuration list for PBXProject "ECWM601-CW03" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A54CFF1742694B00FE3A59 /* Debug */,
+				49A54D001742694B00FE3A59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A54D011742694B00FE3A59 /* Build configuration list for PBXNativeTarget "ECWM601-CW03" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A54D021742694B00FE3A59 /* Debug */,
+				49A54D031742694B00FE3A59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				49A54CF71742694B00FE3A59 /* ECWM601_CW03.xcdatamodel */,
+			);
+			currentVersion = 49A54CF71742694B00FE3A59 /* ECWM601_CW03.xcdatamodel */;
+			path = ECWM601_CW03.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 49A54CD21742694B00FE3A59 /* Project object */;
+}
