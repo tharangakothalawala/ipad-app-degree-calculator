@@ -19,6 +19,20 @@
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize textBoxModuleCode = _textBoxModuleCode;
+@synthesize moduleName = _moduleName;
+@synthesize moduleList = _moduleList;
+
+-(NSMutableArray *)moduleList
+{
+    if (!_moduleList) {
+        _moduleList = [[NSMutableArray alloc]init ];
+    }
+    
+    return _moduleList;
+}
+
+///////////////////////////////////////////
 
 - (void)awakeFromNib
 {
@@ -49,6 +63,9 @@
 
 - (void)viewDidUnload
 {
+    [self setTextBoxModuleCode:nil];
+    [self setTextBoxModuleCode:nil];
+    [self setModuleName:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
