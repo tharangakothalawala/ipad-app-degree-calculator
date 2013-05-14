@@ -18,6 +18,7 @@
 		49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */; };
 		49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */; };
 		49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */; };
+		49A54D12174279AD00FE3A59 /* ReportCardCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54D11174279AD00FE3A59 /* ReportCardCourseDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardMasterViewController.m; sourceTree = "<group>"; };
 		49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportCardDetailViewController.h; sourceTree = "<group>"; };
 		49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardDetailViewController.m; sourceTree = "<group>"; };
+		49A54D10174279AD00FE3A59 /* ReportCardCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCardCourseDetailViewController.h; sourceTree = "<group>"; };
+		49A54D11174279AD00FE3A59 /* ReportCardCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCardCourseDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */,
 				49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */,
 				49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */,
+				49A54D10174279AD00FE3A59 /* ReportCardCourseDetailViewController.h */,
+				49A54D11174279AD00FE3A59 /* ReportCardCourseDetailViewController.m */,
 				49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */,
 				49A54CE81742694B00FE3A59 /* Supporting Files */,
 			);
@@ -177,6 +182,7 @@
 				49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */,
 				49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */,
 				49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */,
+				49A54D12174279AD00FE3A59 /* ReportCardCourseDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

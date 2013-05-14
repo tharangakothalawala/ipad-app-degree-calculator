@@ -51,6 +51,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5Wh-Jw-KvQ" kind="push" id="m0H-Ol-Px6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -61,6 +64,21 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="448" y="248"/>
+        </scene>
+        <scene sceneID="qUs-RV-yNl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UnX-XR-msb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="5Wh-Jw-KvQ" customClass="ReportCardCourseDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e98-3B-hDC">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hJf-aN-sG0"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1291" y="248"/>
         </scene>
         <scene sceneID="18">
             <objects>
@@ -151,8 +169,11 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Gva-zQ-dNq"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="moduleName" destination="FRP-55-Rzs" id="2Fu-l8-c13"/>
+                        <outlet property="buttonModuleAdd" destination="Gva-zQ-dNq" id="I7y-NW-iQv"/>
+                        <outlet property="labelModuleCode" destination="8xo-AQ-jxB" id="bUn-8P-B9L"/>
+                        <outlet property="labelModuleName" destination="8xo-AQ-jxB" id="Mig-we-Ow3"/>
                         <outlet property="textBoxModuleCode" destination="FRP-55-Rzs" id="ynj-vh-xRa"/>
+                        <outlet property="textBoxModuleName" destination="FRP-55-Rzs" id="pA4-Jx-Fal"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -174,6 +195,9 @@
         </scene>
     </scenes>
     <classes>
+        <class className="ReportCardCourseDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportCardCourseDetailViewController.h"/>
+        </class>
         <class className="ReportCardDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportCardDetailViewController.h"/>
             <relationships>
@@ -183,8 +207,11 @@
         <class className="ReportCardMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportCardMasterViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="moduleName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="buttonModuleAdd" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelModuleCode" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelModuleName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textBoxModuleCode" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxModuleName" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

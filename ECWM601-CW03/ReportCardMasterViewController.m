@@ -19,8 +19,11 @@
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize buttonModuleAdd = _buttonModuleAdd;
 @synthesize textBoxModuleCode = _textBoxModuleCode;
-@synthesize moduleName = _moduleName;
+@synthesize textBoxModuleName = _moduleName;
+@synthesize labelModuleCode = _labelModuleCode;
+@synthesize labelModuleName = _labelModuleName;
 @synthesize moduleList = _moduleList;
 
 -(NSMutableArray *)moduleList
@@ -59,13 +62,23 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    self.buttonModuleAdd.enabled = NO;
+    self.labelModuleCode.hidden = YES;
+    self.labelModuleName.hidden = YES;
+    self.textBoxModuleCode.hidden = YES;
+    self.textBoxModuleName.hidden = YES;
 }
 
 - (void)viewDidUnload
 {
     [self setTextBoxModuleCode:nil];
     [self setTextBoxModuleCode:nil];
-    [self setModuleName:nil];
+    [self setTextBoxModuleName:nil];
+    [self setButtonModuleAdd:nil];
+    [self setLabelModuleCode:nil];
+    [self setLabelModuleCode:nil];
+    [self setLabelModuleName:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

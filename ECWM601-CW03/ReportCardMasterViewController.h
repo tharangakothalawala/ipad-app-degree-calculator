@@ -19,8 +19,11 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonModuleAdd;
 @property (weak, nonatomic) IBOutlet UITextField *textBoxModuleCode;
-@property (weak, nonatomic) IBOutlet UITextField *moduleName;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxModuleName;
+@property (weak, nonatomic) IBOutlet UILabel *labelModuleCode;
+@property (weak, nonatomic) IBOutlet UILabel *labelModuleName;
 
 @property (nonatomic, strong) NSMutableArray *moduleList;
 
