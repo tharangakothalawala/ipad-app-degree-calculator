@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ReportCardCourseDetailViewController.h"
 
 @class ReportCardDetailViewController;
 
 #import <CoreData/CoreData.h>
 
-@interface ReportCardMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface ReportCardMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, CourseDetailsDelegate>
 
 @property (strong, nonatomic) ReportCardDetailViewController *detailViewController;
 

@@ -11,7 +11,7 @@
 @interface Assessment : NSObject
 
 @property (nonatomic, strong) NSString *assesmentName;
-@property (nonatomic, strong) NSString *assesmentDueDate;
+@property (nonatomic, strong) NSDate *assesmentDueDate;
 @property (nonatomic) int *assesmentWeight;
 
 @end

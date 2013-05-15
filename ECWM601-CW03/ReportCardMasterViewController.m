@@ -35,6 +35,12 @@
     return _moduleList;
 }
 
+-(void) showModuleNavigation
+{
+    self.labelModuleName.hidden = NO;
+    self.labelModuleCode.hidden = NO;
+}
+
 ///////////////////////////////////////////
 
 - (void)awakeFromNib

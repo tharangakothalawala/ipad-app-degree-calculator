@@ -10,6 +10,8 @@
 
 @implementation ReportCardCourseDetailViewController
 
+@synthesize delegate = _delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,13 +38,13 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.delegate showModuleNavigation];
 }
-*/
 
 - (void)viewDidUnload
 {

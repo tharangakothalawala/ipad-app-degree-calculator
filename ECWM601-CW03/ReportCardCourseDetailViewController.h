@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CourseDetailsDelegate <NSObject>
+
+@required
+-(void) showModuleNavigation;
+@end
+
 @interface ReportCardCourseDetailViewController : UIViewController
+
+@property  (nonatomic,weak) IBOutlet id <CourseDetailsDelegate> delegate;
 
 @end
