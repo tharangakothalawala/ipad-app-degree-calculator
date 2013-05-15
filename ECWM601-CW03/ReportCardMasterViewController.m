@@ -69,11 +69,11 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    self.buttonModuleAdd.enabled = NO;
-    self.labelModuleCode.hidden = YES;
-    self.labelModuleName.hidden = YES;
-    self.textBoxModuleCode.hidden = YES;
-    self.textBoxModuleName.hidden = YES;
+//    self.buttonModuleAdd.enabled = NO;
+//    self.labelModuleCode.hidden = YES;
+//    self.labelModuleName.hidden = YES;
+//    self.textBoxModuleCode.hidden = YES;
+//    self.textBoxModuleName.hidden = YES;
 }
 
 - (void)viewDidUnload
