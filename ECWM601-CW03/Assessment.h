@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *assesmentName;
 @property (nonatomic, strong) NSDate *assesmentDueDate;
-@property (nonatomic) int *assesmentWeight;
+@property (nonatomic, assign) int *assesmentWeight;
+@property (nonatomic, assign) int assignmentMark;
 
 @end

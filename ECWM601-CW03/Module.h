@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *moduleName;
 @property (nonatomic, strong) NSString *moduleCode;
-@property (nonatomic) int credits;
-@property (nonatomic) NSMutableDictionary *assementsList;
+@property (nonatomic, assign) int credits;
+@property (nonatomic, strong) NSMutableDictionary *assementsList;
 
 @end
