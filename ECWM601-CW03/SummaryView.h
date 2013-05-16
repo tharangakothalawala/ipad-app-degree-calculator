@@ -13,4 +13,7 @@
 // draws the initial line graph, X and Y Axis
 - (void) drawGrid;
 
+// scoreList to hold the module scores
+@property (nonatomic, strong) NSMutableArray* scoreList;
+
 @end
