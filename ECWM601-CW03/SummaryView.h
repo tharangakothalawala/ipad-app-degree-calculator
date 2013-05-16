@@ -10,4 +10,7 @@
 
 @interface SummaryView : UIView
 
+// draws the initial line graph, X and Y Axis
+- (void) drawGrid;
+
 @end

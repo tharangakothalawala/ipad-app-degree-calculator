@@ -10,6 +10,7 @@
 
 @interface Module : NSObject
 
+@property (nonatomic, assign) int moduleId;
 @property (nonatomic, strong) NSString *moduleName;
 @property (nonatomic, strong) NSString *moduleCode;
 @property (nonatomic, assign) int credits;

@@ -10,6 +10,7 @@
 
 @implementation Module
 
+@synthesize moduleId = _moduleId;
 @synthesize moduleName = _moduleName;
 @synthesize moduleCode = _moduleCode;
 @synthesize credits = _credits;
