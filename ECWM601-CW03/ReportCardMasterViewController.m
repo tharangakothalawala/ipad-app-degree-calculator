@@ -45,6 +45,7 @@
     // core data
 }
 
+
 -(void) showModuleNavigation
 {
     self.labelModuleName.hidden = NO;
@@ -297,7 +298,8 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = @"Module code";// [[managedObject valueForKey:@"timeStamp"] description];
+    cell.detailTextLabel.text = @"Module name";
 }
 
 - (void)insertNewObject
