@@ -12,6 +12,8 @@
 
 float xAxisGapSize = 10;
 float yAxisGapSize = 117.5;
+float graphMarginBottom = 35;
+float graphMarginLeft = 35;
 
 @synthesize scoreList;
 
@@ -101,12 +103,12 @@ float yAxisGapSize = 117.5;
     CGContextBeginPath(context); // beginning of the paths
     
     // X axis
-    CGContextMoveToPoint(context, 35.0f, (self.bounds.size.height - 35.0f));
-    CGContextAddLineToPoint(context, self.bounds.size.width, (self.bounds.size.height - 35.0f));
+    CGContextMoveToPoint(context, graphMarginLeft, (self.bounds.size.height - graphMarginBottom));
+    CGContextAddLineToPoint(context, self.bounds.size.width, (self.bounds.size.height - graphMarginBottom));
     
     // Y axis
-    CGContextMoveToPoint(context, (35.0f), 0.0f);
-    CGContextAddLineToPoint(context, (35.0f), self.bounds.size.height - 35.0f);
+    CGContextMoveToPoint(context, graphMarginLeft, 0.0f);
+    CGContextAddLineToPoint(context, graphMarginLeft, self.bounds.size.height - graphMarginBottom);
     
     
     CGAffineTransform xform = CGAffineTransformMake(cos(0),  sin(0), sin(0), -cos(0), 0.0,  0.0);
@@ -115,16 +117,16 @@ float yAxisGapSize = 117.5;
     CGContextSetTextDrawingMode(context, kCGTextFillStroke);
     
     // creating + Digits in X axis *********************/
-    CGFloat xPlusDigitGap = 35;
+    CGFloat xPlusDigitGap = graphMarginBottom;
     for (int i = 0; i <= 10; i++) {
         NSString* index = [NSString stringWithFormat:@"%d", i*20];
         const char* number = [index UTF8String];
-        CGContextShowTextAtPoint(context, xPlusDigitGap - 7, (self.bounds.size.height-20), number, index.length);
-        xPlusDigitGap = xPlusDigitGap + 20;
+        CGContextShowTextAtPoint(context, xPlusDigitGap, (self.bounds.size.height-20), number, index.length);
+        xPlusDigitGap = xPlusDigitGap + graphMarginBottom;
     }//*/
     
     // creating scores digits in Y axis *********************/
-    CGFloat yPlusDigitGap = (self.bounds.size.height) - 35;
+    CGFloat yPlusDigitGap = (self.bounds.size.height) - graphMarginBottom;
     for (int i = 0; i <= 5; i++) {
         NSString* index = [NSString stringWithFormat:@"%d", i*20];
         const char* number = [index UTF8String];
@@ -147,12 +149,12 @@ float yAxisGapSize = 117.5;
      * So I have hardcoded a smaple of points to show how I am drawing the points in the graph
      */
     self.scoreList = [[NSMutableArray alloc] init];
-    NSString *point1 = @"0";
-    NSString *point2 = @"25";
-    NSString *point3 = @"35";
-    NSString *point4 = @"45";
-    NSString *point5 = @"86";
-    NSString *point6 = @"64";
+    NSString *point1 = @"90";
+    NSString *point2 = @"100";
+    NSString *point3 = @"70";
+    NSString *point4 = @"60";
+    NSString *point5 = @"80";
+    NSString *point6 = @"40";
     [self.scoreList addObject:point1];
     [self.scoreList addObject:point2];
     [self.scoreList addObject:point3];
@@ -170,8 +172,8 @@ float yAxisGapSize = 117.5;
         
         
         // creating the initial starting point of any given graph (a set of points)
-        CGFloat lastXPoint = 35.0f;
-        CGFloat lastYPoint = 35.0f;
+        CGFloat lastXPoint = graphMarginBottom;
+        CGFloat lastYPoint = self.bounds.size.height-graphMarginBottom;
         // scaling for the static grid
         
         // scaling the user defined paths (commented due to a error of not showing the lines)
@@ -189,6 +191,7 @@ float yAxisGapSize = 117.5;
             //CGFloat xPoint = [[graphPoints objectAtIndex:0] floatValue];
             //CGFloat yPoint = [[graphPoints objectAtIndex:1] floatValue];
             NSLog(@"%g", score);
+            //CGFloat *scale = (score / 20) * 50;
             // scaling the user defined paths
             //xPoint = xPoint / xStartingNumber;
             //yPoint = yPoint / xStartingNumber;
@@ -197,11 +200,11 @@ float yAxisGapSize = 117.5;
             //xPoint = self.bounds.size.width/2 + xPoint;
             //yPoint = self.bounds.size.height/2 - yPoint;
             
-            CGContextMoveToPoint(contextForPath, lastXPoint, (self.bounds.size.height-lastYPoint));
-            CGContextAddLineToPoint(contextForPath, (i+1) * 20, (self.bounds.size.height-(score)));
+            CGContextMoveToPoint(contextForPath, lastXPoint, lastYPoint);
+            CGContextAddLineToPoint(contextForPath, (i+1) * 20, (self.bounds.size.height-((score / 20) * 51)-graphMarginBottom));
             
             lastXPoint = (i+1) * 20;
-            lastYPoint = (self.bounds.size.height-(score));
+            lastYPoint = (self.bounds.size.height-((score / 20) * 51)-graphMarginBottom);
         }
     }//*/
     
