@@ -9,6 +9,7 @@
 #import "ReportCardMasterViewController.h"
 
 #import "ReportCardDetailViewController.h"
+#import "Module.h"
 
 @interface ReportCardMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -33,6 +34,15 @@
     }
     
     return _moduleList;
+}
+
+- (IBAction)addModule:(id)sender
+{
+    Module *module = [[Module alloc] init];
+    module.moduleCode = self.textBoxModuleCode.text;
+    module.moduleName = self.textBoxModuleName.text;
+    
+    // core data
 }
 
 -(void) showModuleNavigation

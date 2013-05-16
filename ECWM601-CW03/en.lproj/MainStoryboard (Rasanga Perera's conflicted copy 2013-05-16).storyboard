@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5">
     <dependencies>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
         <scene sceneID="14">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13" sceneMemberID="firstResponder"/>
@@ -19,6 +20,7 @@
             </objects>
             <point key="canvasLocation" x="448" y="-630"/>
         </scene>
+        <!--Report Card Detail View Controller - Detail-->
         <scene sceneID="16">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
@@ -65,6 +67,7 @@
             </objects>
             <point key="canvasLocation" x="448" y="248"/>
         </scene>
+        <!--View Controller - Summary-->
         <scene sceneID="gj1-gv-9r2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXC-Rl-R35" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +92,7 @@
             </objects>
             <point key="canvasLocation" x="1381" y="887"/>
         </scene>
+        <!--View Controller - Item-->
         <scene sceneID="j6I-T2-mHZ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OED-se-fgo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,6 +108,7 @@
             </objects>
             <point key="canvasLocation" x="2297" y="1071"/>
         </scene>
+        <!--View Controller - Item 2-->
         <scene sceneID="Dji-yn-Anu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3C-Sz-XyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,6 +124,7 @@
             </objects>
             <point key="canvasLocation" x="2297" y="186"/>
         </scene>
+        <!--View Controller - Item 1-->
         <scene sceneID="nIZ-I4-Fz7">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGY-T3-dnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,6 +140,7 @@
             </objects>
             <point key="canvasLocation" x="2297" y="-690"/>
         </scene>
+        <!--Tab Bar Controller-->
         <scene sceneID="Cgk-wt-kUg">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziY-bA-xha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,6 +174,7 @@
             </objects>
             <point key="canvasLocation" x="1369" y="-54"/>
         </scene>
+        <!--Split View Controller-->
         <scene sceneID="18">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
@@ -182,6 +190,7 @@
             </objects>
             <point key="canvasLocation" x="-687" y="-630"/>
         </scene>
+        <!--Report Card Master View Controller - Master-->
         <scene sceneID="24">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -253,11 +262,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="40">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Gva-zQ-dNq">
-                            <connections>
-                                <action selector="addModule:" destination="19" id="74c-Id-SmF"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Gva-zQ-dNq"/>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonModuleAdd" destination="Gva-zQ-dNq" id="I7y-NW-iQv"/>
@@ -270,6 +275,7 @@
             </objects>
             <point key="canvasLocation" x="859" y="-631"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="50">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,6 +301,7 @@
         <class className="ReportCardMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportCardMasterViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addModule:"/>
                 <relationship kind="outlet" name="buttonModuleAdd" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="labelModuleCode" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelModuleName" candidateClass="UILabel"/>
