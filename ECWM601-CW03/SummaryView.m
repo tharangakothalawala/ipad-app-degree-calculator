@@ -132,7 +132,7 @@ float graphMarginLeft = 35;
         CGFloat lastYPoint = self.bounds.size.height-graphMarginBottom;
         NSLog(@"x: %@", lastXPoint);
         
-        for (int i = 1; i < [self.scoreList count]; i++) { //sizeof(self.array)-1
+        for (int i = 0; i < [self.scoreList count]; i++) { //sizeof(self.array)-1
             CGFloat score = [[self.scoreList objectAtIndex:i] floatValue];
             NSLog(@"%g", score);
             
