@@ -12,12 +12,6 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-@property (weak, nonatomic) IBOutlet UIView *levelFourView;
-@property (weak, nonatomic) IBOutlet UIView *levelFiveView;
-@property (weak, nonatomic) IBOutlet UIView *levelSixView;
-@property (weak, nonatomic) IBOutlet UIView *summaryView;
-
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFourBarItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFiveBarItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelSIxBarItem;

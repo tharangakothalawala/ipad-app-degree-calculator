@@ -441,15 +441,10 @@
             <relationships>
                 <relationship kind="outlet" name="courseTabBar" candidateClass="UITabBar"/>
                 <relationship kind="outlet" name="datesBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="levelFiveBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="levelFiveView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="levelFourBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="levelFourView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="levelSIxBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="levelSixView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="summaryBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="summaryView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="textBoxAssigment1Dates" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textBoxAssigment1Mark" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssigment2Dates" candidateClass="UILabel"/>

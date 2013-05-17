@@ -16,11 +16,6 @@
 @implementation ReportCardDetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
-@synthesize levelFourView = _levelFourView;
-@synthesize levelFiveView = _levelFiveView;
-@synthesize levelSixView = _levelSixView;
-@synthesize summaryView = _summaryView;
 @synthesize levelFourBarItem = _levelFourBarItem;
 @synthesize levelFiveBarItem = _levelFiveBarItem;
 @synthesize levelSIxBarItem = _levelSIxBarItem;
@@ -98,7 +93,7 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        //self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
 
@@ -113,11 +108,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.levelFourView.hidden = YES;
-    self.levelFiveView.hidden = YES;
-    self.levelSixView.hidden = YES;
-    self.summaryView.hidden = YES;
-    
     self.courseTabBar.delegate = self;
     
     
@@ -130,10 +120,6 @@
 
 - (void)viewDidUnload
 {
-    [self setLevelFourView:nil];
-    [self setLevelFiveView:nil];
-    [self setLevelSixView:nil];
-    [self setSummaryView:nil];
     [self setLevelFourBarItem:nil];
     [self setLevelFiveBarItem:nil];
     [self setLevelSIxBarItem:nil];
