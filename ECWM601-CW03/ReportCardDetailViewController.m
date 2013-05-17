@@ -49,6 +49,14 @@
 @synthesize labelFinalModuleMark = _labelFinalModuleMark;
 @synthesize summaryView = _summaryView;
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"datePickerPopover"]) {
+        [[segue destinationViewController] setDelegate:self];
+    }
+}
+
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSLog(@"didSelectItem");
     NSString *string = item.title;
@@ -74,6 +82,11 @@
         NSLog(@"Summary");
     } 
     
+}
+
+- (void) setDueDate:(NSDate *) date
+{
+    NSLog(@"%@", (NSString *)date);
 }
 
 - (IBAction)moduleDetailSave:(id)sender 

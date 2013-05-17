@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DatePickerPopoverViewController.h"
 
-@interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate>
+@interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
