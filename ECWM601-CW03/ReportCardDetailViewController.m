@@ -30,6 +30,28 @@
 @synthesize courseTabBar = _courseTabBar;
 @synthesize masterPopoverController = _masterPopoverController;
 
+// UI Elements
+@synthesize textBoxModuleTitle = _textBoxModuleTitile;
+@synthesize textBoxModuleCredit = _textBoxModuleCredit;
+@synthesize textBoxAssignment1Title = _textBoxAssignment1Title;
+@synthesize textBoxAssignment2Title = _textBoxAssignment2Title;
+@synthesize textBoxAssignment3Title = _textBoxAssignment3Title;
+@synthesize textBoxAssignment4Title = _textBoxAssignment4Title;
+@synthesize textBoxAssignment5Title = _textBoxAssignment5Title;
+@synthesize textBoxAssignment6Title = _textBoxAssignment6Title;
+@synthesize textBoxAssigment1Mark = _textBoxAssigment1Mark;
+@synthesize textBoxAssigment2Mark = _textBoxAssigment2Mark;
+@synthesize textBoxAssigment3Mark = _textBoxAssigment3Mark;
+@synthesize textBoxAssigment4Mark = _textBoxAssigment4Mark;
+@synthesize textBoxAssigment5Mark = _textBoxAssigment5Mark;
+@synthesize textBoxAssigment6Mark = _textBoxAssigment6Mark;
+@synthesize textBoxAssigment1Dates = _textBoxAssigment1Dates;
+@synthesize textBoxAssigment2Dates = _textBoxAssigment2Dates;
+@synthesize textBoxAssigment3Dates = _textBoxAssigment3Dates;
+@synthesize textBoxAssigment4Dates = _textBoxAssigment4Dates;
+@synthesize textBoxAssigment5Dates = _textBoxAssigment5Dates;
+@synthesize textBoxAssigment6Dates = _textBoxAssigment6Dates;
+
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSLog(@"didSelectItem");
     NSString *string = item.title;
@@ -119,6 +141,31 @@
     [self setSummaryBarItem:nil];
     [self setLevelFourBarItemCollection:nil];
     [self setCourseTabBar:nil];
+    
+    // Module UI Elements
+    [self setTextBoxModuleTitle:nil];
+    [self setTextBoxModuleCredit:nil];
+    [self setTextBoxAssignment1Title:nil];
+    [self setTextBoxAssigment1Mark:nil];
+    [self setTextBoxAssigment1Dates:nil];
+    [self setTextBoxAssignment1Title:nil];
+    [self setTextBoxAssignment2Title:nil];
+    [self setTextBoxAssignment3Title:nil];
+    [self setTextBoxAssignment4Title:nil];
+    [self setTextBoxAssignment5Title:nil];
+    [self setTextBoxAssignment6Title:nil];
+    [self setTextBoxAssigment2Mark:nil];
+    [self setTextBoxAssigment3Mark:nil];
+    [self setTextBoxAssigment4Mark:nil];
+    [self setTextBoxAssigment4Mark:nil];
+    [self setTextBoxAssigment5Mark:nil];
+    [self setTextBoxAssigment6Mark:nil];
+    [self setTextBoxAssigment2Dates:nil];
+    [self setTextBoxAssigment3Dates:nil];
+    [self setTextBoxAssigment4Dates:nil];
+    [self setTextBoxAssigment5Dates:nil];
+    [self setTextBoxAssigment6Dates:nil];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

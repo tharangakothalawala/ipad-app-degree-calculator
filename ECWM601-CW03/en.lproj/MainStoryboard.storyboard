@@ -284,6 +284,26 @@
                         <outlet property="levelFourBarItem" destination="UJe-OV-ofi" id="gh4-WZ-h7e"/>
                         <outlet property="levelSIxBarItem" destination="jw4-9A-yp4" id="R7X-Q2-wB3"/>
                         <outlet property="summaryBarItem" destination="xHF-Rj-MM4" id="cHY-XX-Ssv"/>
+                        <outlet property="textBoxAssigment1Dates" destination="zd5-XP-Zn6" id="all-Lr-p3E"/>
+                        <outlet property="textBoxAssigment1Mark" destination="Pp6-CK-sac" id="sIv-IB-hnQ"/>
+                        <outlet property="textBoxAssigment2Dates" destination="UTr-8C-LRh" id="sU9-ed-3UO"/>
+                        <outlet property="textBoxAssigment2Mark" destination="nnx-zH-BNh" id="HVW-nh-EVu"/>
+                        <outlet property="textBoxAssigment3Dates" destination="5E6-mH-1P7" id="tMQ-iv-Xkt"/>
+                        <outlet property="textBoxAssigment3Mark" destination="PL0-oI-ddD" id="5f0-IY-eVl"/>
+                        <outlet property="textBoxAssigment4Dates" destination="Pln-lD-S74" id="8jM-gy-NCG"/>
+                        <outlet property="textBoxAssigment4Mark" destination="KM6-1t-6s9" id="lTT-CR-zNC"/>
+                        <outlet property="textBoxAssigment5Dates" destination="txY-HP-nAA" id="jYM-xa-4Er"/>
+                        <outlet property="textBoxAssigment5Mark" destination="40l-6S-6w5" id="5Nd-zl-4jt"/>
+                        <outlet property="textBoxAssigment6Dates" destination="IrO-22-XUB" id="zVN-VN-w2W"/>
+                        <outlet property="textBoxAssigment6Mark" destination="ik6-Pq-Ggy" id="wyV-9n-d05"/>
+                        <outlet property="textBoxAssignment1Title" destination="nEN-Pj-LYB" id="65Z-F9-Ao8"/>
+                        <outlet property="textBoxAssignment2Title" destination="DQd-6w-Lkw" id="gde-W2-nL4"/>
+                        <outlet property="textBoxAssignment3Title" destination="wXT-2b-cUD" id="Iub-id-dv7"/>
+                        <outlet property="textBoxAssignment4Title" destination="5Xv-22-zIY" id="3be-Gj-7cs"/>
+                        <outlet property="textBoxAssignment5Title" destination="hOb-rT-soo" id="KKh-59-kbI"/>
+                        <outlet property="textBoxAssignment6Title" destination="wWE-f9-DEF" id="Nv0-Ta-I0Q"/>
+                        <outlet property="textBoxModuleCredit" destination="xCE-oB-2V4" id="j75-qI-v2K"/>
+                        <outlet property="textBoxModuleTitle" destination="CW1-jA-EQo" id="dYn-FG-RD2"/>
                         <outletCollection property="levelFourBarItemCollection" destination="UJe-OV-ofi" id="Y0F-WZ-Eau"/>
                     </connections>
                 </viewController>
@@ -430,6 +450,26 @@
                 <relationship kind="outlet" name="levelSixView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="summaryBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="summaryView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="textBoxAssigment1Dates" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textBoxAssigment1Mark" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssigment2Dates" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textBoxAssigment2Mark" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssigment3Dates" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textBoxAssigment3Mark" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssigment4Dates" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textBoxAssigment4Mark" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssigment5Dates" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textBoxAssigment5Mark" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssigment6Dates" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textBoxAssigment6Mark" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment1Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment2Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment3Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment4Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment5Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment6Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxModuleCredit" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxModuleTitle" candidateClass="UITextField"/>
                 <relationship kind="outletCollection" name="levelFourBarItemCollection" candidateClass="UITabBarItem"/>
             </relationships>
         </class>
