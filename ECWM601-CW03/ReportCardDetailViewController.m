@@ -46,6 +46,7 @@
 @synthesize textBoxAssigment4Dates = _textBoxAssigment4Dates;
 @synthesize textBoxAssigment5Dates = _textBoxAssigment5Dates;
 @synthesize textBoxAssigment6Dates = _textBoxAssigment6Dates;
+@synthesize labelFinalModuleMark = _labelFinalModuleMark;
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSLog(@"didSelectItem");
@@ -69,6 +70,15 @@
     
 }
 
+- (IBAction)moduleDetailSave:(id)sender 
+{
+    
+}
+
+- (IBAction)addAssignment:(id)sender 
+{
+    
+}
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -152,6 +162,7 @@
     [self setTextBoxAssigment5Dates:nil];
     [self setTextBoxAssigment6Dates:nil];
     
+    [self setLabelFinalModuleMark:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -13,5 +13,6 @@
 @synthesize assesmentName = _assesmentName;
 @synthesize assesmentDueDate = _assesmentDueDate;
 @synthesize assesmentWeight = _assesmentWeight;
+@synthesize assignmentMark = _assignmentMark;
 
 @end

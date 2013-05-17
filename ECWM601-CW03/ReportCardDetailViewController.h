@@ -45,5 +45,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *textBoxAssigment5Dates;
 @property (weak, nonatomic) IBOutlet UILabel *textBoxAssigment6Dates;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelFinalModuleMark;
 
 @end
