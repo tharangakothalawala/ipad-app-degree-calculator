@@ -17,7 +17,41 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize levelFourView = _levelFourView;
+@synthesize levelFiveView = _levelFiveView;
+@synthesize levelSixView = _levelSixView;
+@synthesize summaryView = _summaryView;
+@synthesize levelFourBarItem = _levelFourBarItem;
+@synthesize levelFiveBarItem = _levelFiveBarItem;
+@synthesize levelSIxBarItem = _levelSIxBarItem;
+@synthesize datesBarItem = _datesBarItem;
+@synthesize summaryBarItem = _summaryBarItem;
+@synthesize levelFourBarItemCollection = _levelFourBarItemCollection;
+@synthesize courseTabBar = _courseTabBar;
 @synthesize masterPopoverController = _masterPopoverController;
+
+
+
+
+
+- (void) showLevelFourView {
+    self.levelFourView.hidden = NO;
+}
+
+- (IBAction)textboxXValueFocussed:(id)sender
+{
+//    self.xyTextboxStatus = @"x";
+}
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSLog(@"didSelectItem");
+    NSString *string = item.title;
+    if ([string isEqualToString:@"Level 4"])
+    {
+        NSLog(@"LEVEL 4");
+    }
+}
+
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -57,12 +91,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.levelFourView.hidden = YES;
+    self.levelFiveView.hidden = YES;
+    self.levelSixView.hidden = YES;
+    self.summaryView.hidden = YES;
+    
+    self.courseTabBar.delegate = self;
+    
+    
+    //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    //[[UITabBar appearance] setBackground:summaryBarItemBg];
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
 
 - (void)viewDidUnload
 {
+    [self setLevelFourView:nil];
+    [self setLevelFiveView:nil];
+    [self setLevelSixView:nil];
+    [self setSummaryView:nil];
+    [self setLevelFourBarItem:nil];
+    [self setLevelFiveBarItem:nil];
+    [self setLevelSIxBarItem:nil];
+    [self setDatesBarItem:nil];
+    [self setSummaryBarItem:nil];
+    [self setLevelFourBarItemCollection:nil];
+    [self setCourseTabBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
