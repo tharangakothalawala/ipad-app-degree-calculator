@@ -30,26 +30,26 @@
 @synthesize courseTabBar = _courseTabBar;
 @synthesize masterPopoverController = _masterPopoverController;
 
-
-
-
-
-- (void) showLevelFourView {
-    self.levelFourView.hidden = NO;
-}
-
-- (IBAction)textboxXValueFocussed:(id)sender
-{
-//    self.xyTextboxStatus = @"x";
-}
-
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSLog(@"didSelectItem");
     NSString *string = item.title;
     if ([string isEqualToString:@"Level 4"])
     {
         NSLog(@"LEVEL 4");
-    }
+    } else if ([string isEqualToString:@"Level 5"])
+    {
+        NSLog(@"LEVEL 5");
+    } else if ([string isEqualToString:@"Level 6"])
+    {
+        NSLog(@"LEVEL 6");
+    } else if ([string isEqualToString:@"Dates"])
+    {
+        NSLog(@"Dates");
+    } else if ([string isEqualToString:@"Summary"])
+    {
+        NSLog(@"Summary");
+    } 
+    
 }
 
 
