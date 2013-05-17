@@ -47,24 +47,30 @@
 @synthesize textBoxAssigment5Dates = _textBoxAssigment5Dates;
 @synthesize textBoxAssigment6Dates = _textBoxAssigment6Dates;
 @synthesize labelFinalModuleMark = _labelFinalModuleMark;
+@synthesize summaryView = _summaryView;
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSLog(@"didSelectItem");
     NSString *string = item.title;
     if ([string isEqualToString:@"Level 4"])
     {
+        self.summaryView.hidden = YES;
         NSLog(@"LEVEL 4");
     } else if ([string isEqualToString:@"Level 5"])
     {
+        self.summaryView.hidden = YES;
         NSLog(@"LEVEL 5");
     } else if ([string isEqualToString:@"Level 6"])
     {
+        self.summaryView.hidden = YES;
         NSLog(@"LEVEL 6");
     } else if ([string isEqualToString:@"Dates"])
     {
+        self.summaryView.hidden = YES;
         NSLog(@"Dates");
     } else if ([string isEqualToString:@"Summary"])
     {
+        self.summaryView.hidden = NO;
         NSLog(@"Summary");
     } 
     
@@ -137,6 +143,7 @@
     [self setSummaryBarItem:nil];
     [self setLevelFourBarItemCollection:nil];
     [self setCourseTabBar:nil];
+    self.summaryView.hidden = YES;
     
     // Module UI Elements
     [self setTextBoxModuleTitle:nil];
@@ -163,6 +170,7 @@
     [self setTextBoxAssigment6Dates:nil];
     
     [self setLabelFinalModuleMark:nil];
+    [self setSummaryView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

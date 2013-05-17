@@ -403,6 +403,7 @@
                         <outlet property="levelFourBarItem" destination="UJe-OV-ofi" id="gh4-WZ-h7e"/>
                         <outlet property="levelSIxBarItem" destination="jw4-9A-yp4" id="R7X-Q2-wB3"/>
                         <outlet property="summaryBarItem" destination="xHF-Rj-MM4" id="cHY-XX-Ssv"/>
+                        <outlet property="summaryView" destination="XIP-Xq-XgQ" id="WUj-AS-frb"/>
                         <outlet property="textBoxAssigment1Dates" destination="zd5-XP-Zn6" id="all-Lr-p3E"/>
                         <outlet property="textBoxAssigment1Mark" destination="Pp6-CK-sac" id="sIv-IB-hnQ"/>
                         <outlet property="textBoxAssigment2Dates" destination="UTr-8C-LRh" id="sU9-ed-3UO"/>
@@ -565,6 +566,7 @@
                 <relationship kind="outlet" name="levelFourBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="levelSIxBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="summaryBarItem" candidateClass="UITabBarItem"/>
+                <relationship kind="outlet" name="summaryView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="textBoxAssigment1Dates" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textBoxAssigment1Mark" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssigment2Dates" candidateClass="UILabel"/>
