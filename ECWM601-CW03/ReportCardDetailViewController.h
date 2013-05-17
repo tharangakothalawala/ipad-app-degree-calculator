@@ -44,6 +44,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *textBoxAssigment5Dates;
 @property (weak, nonatomic) IBOutlet UILabel *textBoxAssigment6Dates;
 @property (weak, nonatomic) IBOutlet UILabel *labelFinalModuleMark;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment1Wegiht;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment2Wegiht;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment3Wegiht;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment4Wegiht;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment5Wegiht;
+@property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment6Wegiht;
 
 @property (assign, nonatomic) int dueDateIdentifier;
 

@@ -47,9 +47,15 @@
 @synthesize textBoxAssigment5Dates = _textBoxAssigment5Dates;
 @synthesize textBoxAssigment6Dates = _textBoxAssigment6Dates;
 @synthesize labelFinalModuleMark = _labelFinalModuleMark;
+@synthesize textBoxAssignment1Wegiht = _textBoxAssignment1Wegiht;
 @synthesize summaryView = _summaryView;
 
 @synthesize dueDateIdentifier = _dueDateIdentifier;
+@synthesize textBoxAssignment2Wegiht = _textBoxAssignment2Wegiht;
+@synthesize textBoxAssignment3Wegiht = _textBoxAssignment3Wegiht;
+@synthesize textBoxAssignment4Wegiht = _textBoxAssignment4Wegiht;
+@synthesize textBoxAssignment5Wegiht = _textBoxAssignment5Wegiht;
+@synthesize textBoxAssignment6Wegiht = _textBoxAssignment6Wegiht;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -196,6 +202,12 @@
     
     [self setLabelFinalModuleMark:nil];
     [self setSummaryView:nil];
+    [self setTextBoxAssignment1Wegiht:nil];
+    [self setTextBoxAssignment2Wegiht:nil];
+    [self setTextBoxAssignment3Wegiht:nil];
+    [self setTextBoxAssignment4Wegiht:nil];
+    [self setTextBoxAssignment5Wegiht:nil];
+    [self setTextBoxAssignment6Wegiht:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

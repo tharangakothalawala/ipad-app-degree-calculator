@@ -93,26 +93,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Pp6-CK-sac">
-                                <rect key="frame" x="273" y="174" width="49" height="31"/>
+                                <rect key="frame" x="382" y="174" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nnx-zH-BNh">
-                                <rect key="frame" x="273" y="213" width="49" height="31"/>
+                                <rect key="frame" x="382" y="213" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" minimumFontSize="10" id="Myb-Yr-GpQ">
-                                <rect key="frame" x="330" y="179" width="19" height="21"/>
+                                <rect key="frame" x="334" y="178" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" minimumFontSize="10" id="Sew-ly-kP2">
-                                <rect key="frame" x="330" y="218" width="19" height="21"/>
+                                <rect key="frame" x="334" y="217" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -145,26 +145,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="PL0-oI-ddD">
-                                <rect key="frame" x="273" y="252" width="49" height="31"/>
+                                <rect key="frame" x="382" y="251" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="KM6-1t-6s9">
-                                <rect key="frame" x="273" y="291" width="49" height="31"/>
+                                <rect key="frame" x="382" y="291" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" minimumFontSize="10" id="WXB-Ib-ed8">
-                                <rect key="frame" x="330" y="257" width="19" height="21"/>
+                                <rect key="frame" x="334" y="256" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" minimumFontSize="10" id="1eQ-a8-DEO">
-                                <rect key="frame" x="330" y="296" width="19" height="21"/>
+                                <rect key="frame" x="334" y="295" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -197,26 +197,26 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="40l-6S-6w5">
-                                <rect key="frame" x="273" y="330" width="49" height="31"/>
+                                <rect key="frame" x="382" y="330" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ik6-Pq-Ggy">
-                                <rect key="frame" x="273" y="369" width="49" height="31"/>
+                                <rect key="frame" x="382" y="369" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" minimumFontSize="10" id="d2c-oy-1zp">
-                                <rect key="frame" x="330" y="335" width="19" height="21"/>
+                                <rect key="frame" x="334" y="334" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" lineBreakMode="tailTruncation" minimumFontSize="10" id="htO-U1-pJL">
-                                <rect key="frame" x="330" y="374" width="19" height="21"/>
+                                <rect key="frame" x="334" y="373" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -498,37 +498,37 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="olk-QW-hWn">
-                                <rect key="frame" x="382" y="174" width="49" height="31"/>
+                                <rect key="frame" x="277" y="173" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="jqy-34-7UE">
-                                <rect key="frame" x="382" y="213" width="49" height="31"/>
+                                <rect key="frame" x="277" y="212" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="wtL-Wl-rnA">
-                                <rect key="frame" x="382" y="252" width="49" height="31"/>
+                                <rect key="frame" x="277" y="251" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="JRI-zk-TRG">
-                                <rect key="frame" x="382" y="291" width="49" height="31"/>
+                                <rect key="frame" x="277" y="290" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="JJU-wV-yRc">
-                                <rect key="frame" x="382" y="330" width="49" height="31"/>
+                                <rect key="frame" x="277" y="329" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="OAf-pq-2GP">
-                                <rect key="frame" x="382" y="369" width="49" height="31"/>
+                                <rect key="frame" x="277" y="368" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -561,11 +561,17 @@
                         <outlet property="textBoxAssigment6Dates" destination="IrO-22-XUB" id="zVN-VN-w2W"/>
                         <outlet property="textBoxAssigment6Mark" destination="ik6-Pq-Ggy" id="wyV-9n-d05"/>
                         <outlet property="textBoxAssignment1Title" destination="nEN-Pj-LYB" id="65Z-F9-Ao8"/>
+                        <outlet property="textBoxAssignment1Wegiht" destination="olk-QW-hWn" id="aLg-gA-WQ1"/>
                         <outlet property="textBoxAssignment2Title" destination="DQd-6w-Lkw" id="gde-W2-nL4"/>
+                        <outlet property="textBoxAssignment2Wegiht" destination="jqy-34-7UE" id="CVs-X7-hCS"/>
                         <outlet property="textBoxAssignment3Title" destination="wXT-2b-cUD" id="Iub-id-dv7"/>
+                        <outlet property="textBoxAssignment3Wegiht" destination="wtL-Wl-rnA" id="xY7-kD-DAg"/>
                         <outlet property="textBoxAssignment4Title" destination="5Xv-22-zIY" id="3be-Gj-7cs"/>
+                        <outlet property="textBoxAssignment4Wegiht" destination="JRI-zk-TRG" id="KcL-7r-eFB"/>
                         <outlet property="textBoxAssignment5Title" destination="hOb-rT-soo" id="KKh-59-kbI"/>
+                        <outlet property="textBoxAssignment5Wegiht" destination="JJU-wV-yRc" id="KBf-fT-exw"/>
                         <outlet property="textBoxAssignment6Title" destination="wWE-f9-DEF" id="Nv0-Ta-I0Q"/>
+                        <outlet property="textBoxAssignment6Wegiht" destination="OAf-pq-2GP" id="4J5-ic-8mB"/>
                         <outlet property="textBoxModuleCredit" destination="xCE-oB-2V4" id="j75-qI-v2K"/>
                         <outlet property="textBoxModuleTitle" destination="CW1-jA-EQo" id="dYn-FG-RD2"/>
                         <outletCollection property="levelFourBarItemCollection" destination="UJe-OV-ofi" id="Y0F-WZ-Eau"/>
@@ -841,11 +847,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="textBoxAssigment6Dates" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="textBoxAssigment6Mark" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssignment1Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment1Wegiht" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssignment2Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment2Wegiht" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssignment3Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment3Wegiht" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssignment4Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment4Wegiht" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssignment5Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment5Wegiht" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxAssignment6Title" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textBoxAssignment6Wegiht" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxModuleCredit" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="textBoxModuleTitle" candidateClass="UITextField"/>
                 <relationship kind="outletCollection" name="levelFourBarItemCollection" candidateClass="UITabBarItem"/>
