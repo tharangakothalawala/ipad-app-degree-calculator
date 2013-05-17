@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ReportCardCourseDetailViewController.h"
+#import "CourseNamePopoverVIewController.h"
 
 @class ReportCardDetailViewController;
 
 #import <CoreData/CoreData.h>
 
-@interface ReportCardMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, CourseDetailsDelegate>
+@interface ReportCardMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, CourseNamePopOverDelegate>
 
 @property (strong, nonatomic) ReportCardDetailViewController *detailViewController;
 
@@ -21,6 +21,7 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonModuleAdd;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonCourseAdd;
 @property (weak, nonatomic) IBOutlet UITextField *textBoxModuleCode;
 @property (weak, nonatomic) IBOutlet UITextField *textBoxModuleName;
 @property (weak, nonatomic) IBOutlet UILabel *labelModuleCode;

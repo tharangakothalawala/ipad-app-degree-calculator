@@ -21,11 +21,19 @@
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize buttonModuleAdd = _buttonModuleAdd;
+@synthesize buttonCourseAdd = _buttonCourseAdd;
 @synthesize textBoxModuleCode = _textBoxModuleCode;
 @synthesize textBoxModuleName = _moduleName;
 @synthesize labelModuleCode = _labelModuleCode;
 @synthesize labelModuleName = _labelModuleName;
 @synthesize moduleList = _moduleList;
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"courseNamePopover"]) {
+        [[segue destinationViewController] setDelegate:self];
+    }
+}
 
 -(NSMutableArray *)moduleList
 {
@@ -52,6 +60,12 @@
     self.labelModuleCode.hidden = NO;
 }
 
+- (void) setCourseName:(NSString *) value {
+    [self.buttonCourseAdd setEnabled:NO];
+    self.title = value;
+    NSLog(@" %@", value);
+}
+
 ///////////////////////////////////////////
 
 - (void)awakeFromNib
@@ -75,7 +89,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (ReportCardDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     // Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -96,6 +110,7 @@
     [self setLabelModuleCode:nil];
     [self setLabelModuleCode:nil];
     [self setLabelModuleName:nil];
+    [self setButtonCourseAdd:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
