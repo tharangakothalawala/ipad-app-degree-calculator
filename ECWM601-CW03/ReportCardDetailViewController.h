@@ -45,6 +45,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *textBoxAssigment6Dates;
 @property (weak, nonatomic) IBOutlet UILabel *labelFinalModuleMark;
 
+@property (assign, nonatomic) int dueDateIdentifier;
+
 // Summary View
 @property (weak, nonatomic) IBOutlet UIView *summaryView;
 @end

@@ -49,6 +49,7 @@
 @synthesize labelFinalModuleMark = _labelFinalModuleMark;
 @synthesize summaryView = _summaryView;
 
+@synthesize dueDateIdentifier = _dueDateIdentifier;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -86,17 +87,28 @@
 
 - (void) setDueDate:(NSDate *) date
 {
+    if (self.dueDateIdentifier == 1) {
+        //
+    } else if (self.dueDateIdentifier == 2) {
+        
+    }
+    NSLog(@"%d", self.dueDateIdentifier);
     NSLog(@"%@", (NSString *)date);
 }
 
 - (IBAction)moduleDetailSave:(id)sender 
 {
-    
+    // save module details
 }
 
 - (IBAction)addAssignment:(id)sender 
 {
-    
+    // adding assignment for each module
+}
+
+- (IBAction)setDate:(id)sender {
+    NSLog(@"%d", [sender tag]);
+    self.dueDateIdentifier = [sender tag];
 }
 
 /////////////////////////////////////////////////////////////////////////
