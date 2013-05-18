@@ -62,20 +62,20 @@ float graphMarginLeft = 35;
     CGContextSetLineWidth(context, 1);
     [[UIColor lightGrayColor] set];
     CGContextBeginPath(context);
-
+    
     // BEGIN drawing the x and y Axis
     // same lightGrayColor color but with the alpha 1 to increase the line width
     [[UIColor colorWithRed:85 green:84 blue:85 alpha:1] set];
     CGContextBeginPath(context); // beginning of the paths
-
+    
     // X axis
     CGContextMoveToPoint(context, graphMarginLeft, (self.bounds.size.height - graphMarginBottom));
     CGContextAddLineToPoint(context, self.bounds.size.width, (self.bounds.size.height - graphMarginBottom));
-
+    
     // Y axis
     CGContextMoveToPoint(context, graphMarginLeft, 0.0f);
     CGContextAddLineToPoint(context, graphMarginLeft, self.bounds.size.height - graphMarginBottom);
-
+    
     // main Y gaps
     CGFloat yMainGap = ((self.bounds.size.height) - graphMarginBottom) - 51;
     for (int i = 0; i < 5; i++) {
@@ -92,17 +92,17 @@ float graphMarginLeft = 35;
     CGContextSelectFont(context, "Arial", 15.f, kCGEncodingMacRoman); // setting the font properties. (font-family, font-weight, encoding type)
     CGContextSetTextDrawingMode(context, kCGTextFillStroke);
     
-    CGFloat scoreGap = (self.bounds.size.width - graphMarginLeft ) / [self.scoreList count];
-
+    CGFloat scoreGap = (self.bounds.size.width - graphMarginLeft-20 ) / [self.scoreList count];
+    
     // creating ... in X axis (-)
-    CGFloat xPlusDigitGap = scoreGap;
+    CGFloat xPlusDigitGap = scoreGap+(graphMarginBottom);
     for (int i = 0; i <= [self.scoreList count]; i++) {
         NSString* index = [NSString stringWithFormat:@"%d", i*20];
         const char* number = [index UTF8String];
         CGContextShowTextAtPoint(context, xPlusDigitGap, (self.bounds.size.height-20), number, index.length);
         xPlusDigitGap = xPlusDigitGap + scoreGap;
     }
-
+    
     // creating score digits in Y axis (|)
     CGFloat yPlusDigitGap = (self.bounds.size.height) - graphMarginBottom;
     for (int i = 0; i <= 5; i++) {
@@ -121,25 +121,25 @@ float graphMarginLeft = 35;
     CGContextRef contextForPath = UIGraphicsGetCurrentContext();
     [[UIColor redColor] set]; // R13: adding the redColor
     CGContextBeginPath(contextForPath);
-
+    
     // Drawing the paths according to the user defined points
     // only go through the point array if we have any points to draw
     if ([self.scoreList count] > 0) {
-        CGFloat scoreGap = (self.bounds.size.width - graphMarginLeft ) / [self.scoreList count];
+        CGFloat scoreGap = (self.bounds.size.width - graphMarginLeft-20) / [self.scoreList count];
         
         // creating the initial starting point of any given graph (a set of points)
-        CGFloat lastXPoint = graphMarginBottom;
+        CGFloat lastXPoint = scoreGap+(graphMarginBottom);
         CGFloat lastYPoint = self.bounds.size.height-graphMarginBottom;
-        NSLog(@"x: %@", lastXPoint);
+        //NSLog(@"x: %@", lastXPoint);
         
         for (int i = 0; i < [self.scoreList count]; i++) { //sizeof(self.array)-1
             CGFloat score = [[self.scoreList objectAtIndex:i] floatValue];
             NSLog(@"%g", score);
             
-            CGContextMoveToPoint(contextForPath, lastXPoint, lastYPoint);
-            CGContextAddLineToPoint(contextForPath, (i+1) * scoreGap, (self.bounds.size.height-((score / 20) * yAxisGapSize)-graphMarginBottom));
+            CGContextMoveToPoint(contextForPath, lastXPoint, (self.bounds.size.height-graphMarginBottom));
+            CGContextAddLineToPoint(contextForPath, lastXPoint, (self.bounds.size.height-((score / 20) * yAxisGapSize)-graphMarginBottom));
             
-            lastXPoint = (i+1) * scoreGap;
+            lastXPoint = ((i+2) * scoreGap)+(graphMarginBottom);
             lastYPoint = (self.bounds.size.height-((score / 20) * yAxisGapSize)-graphMarginBottom);
         }
     }
