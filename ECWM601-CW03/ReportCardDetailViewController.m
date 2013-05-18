@@ -24,6 +24,7 @@
 @synthesize levelFourBarItemCollection = _levelFourBarItemCollection;
 @synthesize courseTabBar = _courseTabBar;
 @synthesize masterPopoverController = _masterPopoverController;
+@synthesize masterViewController = _masterViewController;
 
 // UI Elements
 @synthesize textBoxModuleTitle = _textBoxModuleTitile;
@@ -71,14 +72,17 @@
     {
         self.summaryView.hidden = YES;
         self.title = @" - Level 4";
+        [self.masterViewController displayLevel:4];
     } else if ([string isEqualToString:@"Level 5"])
     {
         self.summaryView.hidden = YES;
         self.title = @" - Level 5";
+        [self.masterViewController displayLevel:5];
     } else if ([string isEqualToString:@"Level 6"])
     {
         self.summaryView.hidden = YES;
         self.title = @" - Level 6";
+        [self.masterViewController displayLevel:6];
     } else if ([string isEqualToString:@"Dates"])
     {
         self.summaryView.hidden = YES;
@@ -87,6 +91,7 @@
     {
         self.summaryView.hidden = NO;
         self.title = @"Summary";
+        [self.masterViewController hideLevelDetails];
     } 
     
 }

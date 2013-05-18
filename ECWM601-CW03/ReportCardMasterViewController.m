@@ -65,6 +65,18 @@
     self.title = value;
     NSLog(@" %@", value);
 }
+
+- (void) displayLevel:(int) levelId
+{
+    self.tableView.hidden = NO;
+    
+    NSLog(@"LevelId %d", levelId);
+}
+
+- (void)hideLevelDetails
+{
+    self.tableView.hidden = YES;
+}
 //
 //- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 //    

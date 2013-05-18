@@ -29,4 +29,7 @@
 
 @property (nonatomic, strong) NSMutableArray *moduleList;
 
+-(void) displayLevel:(int) levelId;
+-(void) hideLevelDetails;
+ 
 @end
