@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (weak, nonatomic) IBOutlet UILabel *levelNameLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonModuleAdd;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *buttonCourseAdd;
 @property (weak, nonatomic) IBOutlet UITextField *textBoxModuleCode;

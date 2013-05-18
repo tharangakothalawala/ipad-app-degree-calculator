@@ -20,6 +20,7 @@
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize levelNameLabel = _levelNameLabel;
 @synthesize buttonModuleAdd = _buttonModuleAdd;
 @synthesize buttonCourseAdd = _buttonCourseAdd;
 @synthesize textBoxModuleCode = _textBoxModuleCode;
@@ -123,6 +124,7 @@
     [self setLabelModuleCode:nil];
     [self setLabelModuleName:nil];
     [self setButtonCourseAdd:nil];
+    [self setLevelNameLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
