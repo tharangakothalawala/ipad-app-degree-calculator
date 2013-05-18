@@ -83,7 +83,7 @@
     {
         self.summaryView.hidden = YES;
         NSLog(@"Dates");
-    } else if ([string isEqualToString:@" - Summary"])
+    } else if ([string isEqualToString:@"Summary"])
     {
         self.summaryView.hidden = NO;
         self.title = @"Summary";
@@ -159,6 +159,20 @@
     
     //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     //[[UITabBar appearance] setBackground:summaryBarItemBg];
+    UIImage *summaryBarItemBg = [UIImage imageNamed:@"grad.png"];
+    UITabBar *tabbar = self.tabBarController.tabBar;
+    UITabBarItem *item0 = [tabbar.items objectAtIndex:0];
+    UITabBarItem *item1 = [tabbar.items objectAtIndex:1];
+    UITabBarItem *item2 = [tabbar.items objectAtIndex:2];
+    UITabBarItem *item3 = [tabbar.items objectAtIndex:3];
+    UITabBarItem *item4 = [tabbar.items objectAtIndex:4];
+    
+    [item0 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
+    [item1 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
+    [item2 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
+    [item3 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
+    [item4 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
+    //*/
     
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];

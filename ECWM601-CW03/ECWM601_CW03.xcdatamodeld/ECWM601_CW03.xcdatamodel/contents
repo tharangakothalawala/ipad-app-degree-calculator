@@ -13,12 +13,6 @@
         <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="modules" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="courseId" inverseEntity="Module" syncable="YES"/>
     </entity>
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
-        <userInfo/>
-    </entity>
     <entity name="Module" syncable="YES">
         <attribute name="credits" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="levelId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -30,8 +24,7 @@
     </entity>
     <elements>
         <element name="Assessment" positionX="-9" positionY="153" width="128" height="133"/>
-        <element name="Event" positionX="198" positionY="-54" width="128" height="60"/>
-        <element name="Module" positionX="-288" positionY="138" width="128" height="148"/>
         <element name="Course" positionX="-290" positionY="-54" width="128" height="88"/>
+        <element name="Module" positionX="-288" positionY="138" width="128" height="148"/>
     </elements>
 </model>
