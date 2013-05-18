@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "DatePickerPopoverViewController.h"
+#import "ReportCardMasterViewController.h"
 
 @interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
+
+@property (strong, nonatomic) ReportCardMasterViewController *masterViewController;
 
 @property (strong, nonatomic) id detailItem;
 

@@ -25,6 +25,6 @@
     <elements>
         <element name="Assessment" positionX="-9" positionY="153" width="128" height="133"/>
         <element name="Course" positionX="-290" positionY="-54" width="128" height="88"/>
-        <element name="Module" positionX="-288" positionY="138" width="128" height="148"/>
+        <element name="Module" positionX="-288" positionY="138" width="128" height="150"/>
     </elements>
 </model>

@@ -157,6 +157,8 @@
     [super viewDidLoad];
     self.courseTabBar.delegate = self;
     
+    self.masterViewController = (ReportCardMasterViewController *)[[self.splitViewController.viewControllers objectAtIndex:0] topViewController];
+    
     //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     //[[UITabBar appearance] setBackground:summaryBarItemBg];
     UIImage *summaryBarItemBg = [UIImage imageNamed:@"grad.png"];
