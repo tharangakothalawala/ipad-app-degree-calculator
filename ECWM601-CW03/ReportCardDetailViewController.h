@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "DatePickerPopoverViewController.h"
 #import "ReportCardMasterViewController.h"
+#import "Module.h"
 
 @interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
 
 @property (strong, nonatomic) ReportCardMasterViewController *masterViewController;
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) Module *module;
 
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFourBarItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFiveBarItem;

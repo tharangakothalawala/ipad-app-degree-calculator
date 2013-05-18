@@ -218,13 +218,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    self.detailViewController.detailItem = selectedObject;    
+    Module *moudle = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    [self.detailViewController setModule:moudle];
 }
 
 #pragma mark - Fetched results controller
-
-
 
 - (NSFetchedResultsController *)fetchedResultsController
 {

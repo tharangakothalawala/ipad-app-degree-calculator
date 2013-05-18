@@ -15,7 +15,7 @@
 
 @implementation ReportCardDetailViewController
 
-@synthesize detailItem = _detailItem;
+@synthesize module = _module;
 @synthesize levelFourBarItem = _levelFourBarItem;
 @synthesize levelFiveBarItem = _levelFiveBarItem;
 @synthesize levelSIxBarItem = _levelSIxBarItem;
@@ -122,14 +122,12 @@
     self.dueDateIdentifier = [sender tag];
 }
 
-/////////////////////////////////////////////////////////////////////////
+// Manage module details
 
-#pragma mark - Managing the detail item
-
-- (void)setDetailItem:(id)newDetailItem
+- (void)setModule:(Module *)module
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (_module != module) {
+        _module = module;
         
         // Update the view.
         [self configureView];
@@ -137,15 +135,27 @@
 
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    }
+    
+    [self showModuleDetails:module];
+}
+
+- (void)showModuleDetails:(Module *)module
+{
+    self.textBoxModuleTitle.text = module.moduleName;
+    
+    if (module.credits == nil) {
+        self.textBoxModuleCredit.text = [NSString stringWithFormat:@"%@", module.credits];
+    }
+    
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        //self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.module) {
+        //self.detailDescriptionLabel.text = [module description];
     }
 }
 
