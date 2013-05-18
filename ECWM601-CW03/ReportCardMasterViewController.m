@@ -65,6 +65,12 @@
     self.title = value;
     NSLog(@" %@", value);
 }
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    indexPath.row;
+//    
+//}
 
 ///////////////////////////////////////////
 
@@ -91,14 +97,8 @@
     // Set up the edit and add buttons.
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertModule)];
     self.navigationItem.rightBarButtonItem = addButton;
-    
-//    self.buttonModuleAdd.enabled = NO;
-//    self.labelModuleCode.hidden = YES;
-//    self.labelModuleName.hidden = YES;
-//    self.textBoxModuleCode.hidden = YES;
-//    self.textBoxModuleName.hidden = YES;
 }
 
 - (void)viewDidUnload
@@ -207,6 +207,8 @@
 }
 
 #pragma mark - Fetched results controller
+
+
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
@@ -317,7 +319,7 @@
     cell.detailTextLabel.text = [[managedObject valueForKey:@"moduleName"] description];
 }
 
-- (void)insertNewObject
+- (void)insertModule
 {
     if ([self.textBoxModuleCode.text isEqualToString:@""] || [self.textBoxModuleName.text isEqualToString:@""]) {
         return;

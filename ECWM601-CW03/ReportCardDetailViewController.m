@@ -70,23 +70,23 @@
     if ([string isEqualToString:@"Level 4"])
     {
         self.summaryView.hidden = YES;
-        NSLog(@"LEVEL 4");
+        self.title = @" - Level 4";
     } else if ([string isEqualToString:@"Level 5"])
     {
         self.summaryView.hidden = YES;
-        NSLog(@"LEVEL 5");
+        self.title = @" - Level 5";
     } else if ([string isEqualToString:@"Level 6"])
     {
         self.summaryView.hidden = YES;
-        NSLog(@"LEVEL 6");
+        self.title = @" - Level 6";
     } else if ([string isEqualToString:@"Dates"])
     {
         self.summaryView.hidden = YES;
         NSLog(@"Dates");
-    } else if ([string isEqualToString:@"Summary"])
+    } else if ([string isEqualToString:@" - Summary"])
     {
         self.summaryView.hidden = NO;
-        NSLog(@"Summary");
+        self.title = @"Summary";
     } 
     
 }
@@ -156,7 +156,6 @@
 {
     [super viewDidLoad];
     self.courseTabBar.delegate = self;
-    
     
     //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     //[[UITabBar appearance] setBackground:summaryBarItemBg];

@@ -16,4 +16,5 @@
 @property (nonatomic, assign) int credits;
 @property (nonatomic, strong) NSMutableDictionary *assementsList;
 
+
 @end
