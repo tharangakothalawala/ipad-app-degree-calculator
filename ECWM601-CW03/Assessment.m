@@ -17,6 +17,6 @@
 @dynamic assesmentWeight;
 @dynamic assessmentId;
 @dynamic assignmentMark;
-@dynamic moduleId;
+@dynamic module;
 
 @end

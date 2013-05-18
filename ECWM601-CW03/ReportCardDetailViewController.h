@@ -17,8 +17,6 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) Module *module;
-- (void)editModuleDetails;
-- (void)showModuleDetails;
 
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFourBarItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFiveBarItem;

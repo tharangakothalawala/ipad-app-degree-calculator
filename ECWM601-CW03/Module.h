@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSNumber * moduleId;
 @property (nonatomic, retain) NSString * moduleName;
 @property (nonatomic, retain) NSSet *assignments;
-@property (nonatomic, retain) Course *courseId;
+@property (nonatomic, retain) Course *course;
 @end
 
 @interface Module (CoreDataGeneratedAccessors)

@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C90902017450AE2000B5CA4 /* ReportCardLevelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C90901F17450AE1000B5CA4 /* ReportCardLevelDetailViewController.m */; };
-		0CD4E1E51747AA97001717DD /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4E1E41747AA97001717DD /* Module.m */; };
-		0CD4E1E81747AA97001717DD /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4E1E71747AA97001717DD /* Course.m */; };
-		0CD4E1EB1747AA98001717DD /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4E1EA1747AA98001717DD /* Assessment.m */; };
+		0C987A751747F11400FD8215 /* grad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C987A741747F11400FD8215 /* grad.png */; };
+		0C987A791747F3EC00FD8215 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A781747F3EC00FD8215 /* Course.m */; };
+		0C987A7C1747F3ED00FD8215 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7B1747F3EC00FD8215 /* Module.m */; };
+		0C987A7F1747F3ED00FD8215 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7E1747F3ED00FD8215 /* Assessment.m */; };
 		49A54CE01742694B00FE3A59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CDF1742694B00FE3A59 /* UIKit.framework */; };
 		49A54CE21742694B00FE3A59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE11742694B00FE3A59 /* Foundation.framework */; };
 		49A54CE41742694B00FE3A59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE31742694B00FE3A59 /* CoreGraphics.framework */; };
@@ -31,12 +32,13 @@
 /* Begin PBXFileReference section */
 		0C90901E17450AE1000B5CA4 /* ReportCardLevelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCardLevelDetailViewController.h; sourceTree = "<group>"; };
 		0C90901F17450AE1000B5CA4 /* ReportCardLevelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCardLevelDetailViewController.m; sourceTree = "<group>"; };
-		0CD4E1E31747AA97001717DD /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
-		0CD4E1E41747AA97001717DD /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
-		0CD4E1E61747AA97001717DD /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
-		0CD4E1E71747AA97001717DD /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		0CD4E1E91747AA98001717DD /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
-		0CD4E1EA1747AA98001717DD /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
+		0C987A741747F11400FD8215 /* grad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grad.png; sourceTree = SOURCE_ROOT; };
+		0C987A771747F3EC00FD8215 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		0C987A781747F3EC00FD8215 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		0C987A7A1747F3EC00FD8215 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		0C987A7B1747F3EC00FD8215 /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		0C987A7D1747F3ED00FD8215 /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
+		0C987A7E1747F3ED00FD8215 /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
 		49A54CDB1742694B00FE3A59 /* ECWM601-CW03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECWM601-CW03.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A54CDF1742694B00FE3A59 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49A54CE11742694B00FE3A59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,12 +84,6 @@
 		0C40147D17436B1400EEBB67 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0CD4E1E91747AA98001717DD /* Assessment.h */,
-				0CD4E1EA1747AA98001717DD /* Assessment.m */,
-				0CD4E1E61747AA97001717DD /* Course.h */,
-				0CD4E1E71747AA97001717DD /* Course.m */,
-				0CD4E1E31747AA97001717DD /* Module.h */,
-				0CD4E1E41747AA97001717DD /* Module.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -123,6 +119,7 @@
 		49A54CE71742694B00FE3A59 /* ECWM601-CW03 */ = {
 			isa = PBXGroup;
 			children = (
+				0C987A741747F11400FD8215 /* grad.png */,
 				CE7A96A61744FD8C0017B0CB /* view */,
 				0C40147D17436B1400EEBB67 /* model */,
 				49A54CF01742694B00FE3A59 /* ReportCardAppDelegate.h */,
@@ -160,6 +157,12 @@
 		CE7A96A61744FD8C0017B0CB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				0C987A7D1747F3ED00FD8215 /* Assessment.h */,
+				0C987A7E1747F3ED00FD8215 /* Assessment.m */,
+				0C987A7A1747F3EC00FD8215 /* Module.h */,
+				0C987A7B1747F3EC00FD8215 /* Module.m */,
+				0C987A771747F3EC00FD8215 /* Course.h */,
+				0C987A781747F3EC00FD8215 /* Course.m */,
 				CE7A96A81744FDAE0017B0CB /* SummaryView.h */,
 				CE7A96A91744FDAE0017B0CB /* SummaryView.m */,
 			);
@@ -218,6 +221,7 @@
 			files = (
 				49A54CEC1742694B00FE3A59 /* InfoPlist.strings in Resources */,
 				49A54CF51742694B00FE3A59 /* MainStoryboard.storyboard in Resources */,
+				0C987A751747F11400FD8215 /* grad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +242,9 @@
 				0C90902017450AE2000B5CA4 /* ReportCardLevelDetailViewController.m in Sources */,
 				C0B47F5417465AC900BD7DF5 /* CourseNamePopoverVIewController.m in Sources */,
 				C0B47F5817466BDA00BD7DF5 /* DatePickerPopoverViewController.m in Sources */,
-				0CD4E1E51747AA97001717DD /* Module.m in Sources */,
-				0CD4E1E81747AA97001717DD /* Course.m in Sources */,
-				0CD4E1EB1747AA98001717DD /* Assessment.m in Sources */,
+				0C987A791747F3EC00FD8215 /* Course.m in Sources */,
+				0C987A7C1747F3ED00FD8215 /* Module.m in Sources */,
+				0C987A7F1747F3ED00FD8215 /* Assessment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,6 @@
 @property (nonatomic, retain) NSNumber * assesmentWeight;
 @property (nonatomic, retain) NSNumber * assessmentId;
 @property (nonatomic, retain) NSNumber * assignmentMark;
-@property (nonatomic, retain) Module *moduleId;
+@property (nonatomic, retain) Module *module;
 
 @end

@@ -233,6 +233,11 @@
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
+    
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", self.courseLevelId];
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", @"Test"];
+//    [fetchRequest setPredicate:predicate];
+    
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"moduleCode" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];

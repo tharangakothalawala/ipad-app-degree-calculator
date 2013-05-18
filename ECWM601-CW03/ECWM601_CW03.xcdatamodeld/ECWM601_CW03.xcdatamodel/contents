@@ -6,12 +6,12 @@
         <attribute name="assesmentWeight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="assessmentId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="assignmentMark" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="moduleId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="assignments" inverseEntity="Module" syncable="YES"/>
+        <relationship name="module" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="assignments" inverseEntity="Module" syncable="YES"/>
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="courseId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="modules" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="courseId" inverseEntity="Module" syncable="YES"/>
+        <relationship name="modules" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="course" inverseEntity="Module" syncable="YES"/>
     </entity>
     <entity name="Module" representedClassName="Module" syncable="YES">
         <attribute name="credits" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -19,12 +19,12 @@
         <attribute name="moduleCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="moduleId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="moduleName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assessment" inverseName="moduleId" inverseEntity="Assessment" syncable="YES"/>
-        <relationship name="courseId" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="modules" inverseEntity="Course" syncable="YES"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assessment" inverseName="module" inverseEntity="Assessment" syncable="YES"/>
+        <relationship name="course" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="modules" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Assessment" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Course" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Module" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Assessment" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Course" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="Module" positionX="0" positionY="0" width="128" height="150"/>
     </elements>
 </model>

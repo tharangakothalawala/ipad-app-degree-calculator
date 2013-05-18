@@ -19,6 +19,6 @@
 @dynamic moduleId;
 @dynamic moduleName;
 @dynamic assignments;
-@dynamic courseId;
+@dynamic course;
 
 @end

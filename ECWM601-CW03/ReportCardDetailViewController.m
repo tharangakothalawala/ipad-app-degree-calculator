@@ -10,7 +10,12 @@
 
 @interface ReportCardDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 - (void)configureView;
+- (void)editModuleDetails;
+- (void)showModuleDetails;
+- (void)editAssignment1;
+
 @end
 
 @implementation ReportCardDetailViewController
@@ -123,7 +128,7 @@
     [self editModuleDetails];
 }
 
-- (IBAction)addAssignment:(id)sender 
+- (IBAction)addAssignment:(id)sender
 {
     // adding assignment for each module
     if (self.assignmentPointer == 0) {
@@ -181,6 +186,11 @@
     
 }
 
+- (void)editAssignment1
+{
+    
+}
+
 - (void)editModuleDetails
 {
     self.module.moduleName = self.textBoxModuleTitle.text;
@@ -210,7 +220,6 @@
     [super viewDidLoad];
     self.courseTabBar.delegate = self;
     // hiding the assignment areas
-    self.assignment1View.hidden = YES;
     self.assignment2View.hidden = YES;
     self.assignment3View.hidden = YES;
     self.assignment4View.hidden = YES;
@@ -221,7 +230,6 @@
     
     // set default course level
     self.masterViewController.courseLevelId = 4;
-    // show default level on TabBar
     
     //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     //[[UITabBar appearance] setBackground:summaryBarItemBg];
@@ -232,6 +240,11 @@
     UITabBarItem *item2 = [tabbar.items objectAtIndex:2];
     UITabBarItem *item3 = [tabbar.items objectAtIndex:3];
     UITabBarItem *item4 = [tabbar.items objectAtIndex:4];
+    
+    // show default level on TabBar
+    [self.tabBarController setSelectedIndex:0];
+    
+    summaryBarItemBg = nil;
     
     [item0 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
     [item1 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
