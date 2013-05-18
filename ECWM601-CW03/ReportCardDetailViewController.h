@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITabBarItem *summaryBarItem;
 @property (strong, nonatomic) IBOutletCollection(UITabBarItem) NSArray *levelFourBarItemCollection;
 @property (weak, nonatomic) IBOutlet UITabBar *courseTabBar;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAddAssignment;
 
 // UI Elements
 @property (weak, nonatomic) IBOutlet UITextField *textBoxModuleTitle;
@@ -59,6 +60,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment6Wegiht;
 
 @property (assign, nonatomic) int dueDateIdentifier;
+
+@property (weak, nonatomic) IBOutlet UIView *assignment1View;
+@property (weak, nonatomic) IBOutlet UIView *assignment2View;
+@property (weak, nonatomic) IBOutlet UIView *assignment3View;
+@property (weak, nonatomic) IBOutlet UIView *assignment4View;
+@property (weak, nonatomic) IBOutlet UIView *assignment5View;
+@property (weak, nonatomic) IBOutlet UIView *assignment6View;
+@property (assign, nonatomic) int assignmentPointer;
 
 // Summary View
 @property (weak, nonatomic) IBOutlet UIView *summaryView;

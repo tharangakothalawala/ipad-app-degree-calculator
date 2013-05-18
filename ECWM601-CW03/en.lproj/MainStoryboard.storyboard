@@ -582,6 +582,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="53"/>
                     <connections>
+                        <outlet property="assignment1View" destination="kAX-8g-AYz" id="IM0-gO-hJJ"/>
+                        <outlet property="assignment2View" destination="bZg-zV-sjk" id="5Kw-vX-Lvm"/>
+                        <outlet property="assignment3View" destination="gjb-A0-kUw" id="ADD-Ro-p08"/>
+                        <outlet property="assignment4View" destination="eUE-Wi-a8g" id="CA9-nf-rBv"/>
+                        <outlet property="assignment5View" destination="RSg-up-BaA" id="Xod-Zm-yLi"/>
+                        <outlet property="assignment6View" destination="yd5-fe-No9" id="Hg9-Pb-Rdj"/>
+                        <outlet property="buttonAddAssignment" destination="5hY-30-Ge6" id="uku-YZ-bd2"/>
                         <outlet property="courseTabBar" destination="isg-5Y-bjR" id="iLq-T8-eJf"/>
                         <outlet property="datesBarItem" destination="XkQ-1n-fPM" id="b2H-vD-NMw"/>
                         <outlet property="labelFinalModuleMark" destination="N4f-QK-OMG" id="EnG-w4-bGn"/>

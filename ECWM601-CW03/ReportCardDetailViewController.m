@@ -24,6 +24,7 @@
 @synthesize summaryBarItem = _summaryBarItem;
 @synthesize levelFourBarItemCollection = _levelFourBarItemCollection;
 @synthesize courseTabBar = _courseTabBar;
+@synthesize buttonAddAssignment = _buttonAddAssignment;
 @synthesize masterPopoverController = _masterPopoverController;
 @synthesize masterViewController = _masterViewController;
 
@@ -58,6 +59,14 @@
 @synthesize textBoxAssignment4Wegiht = _textBoxAssignment4Wegiht;
 @synthesize textBoxAssignment5Wegiht = _textBoxAssignment5Wegiht;
 @synthesize textBoxAssignment6Wegiht = _textBoxAssignment6Wegiht;
+
+@synthesize assignment1View = _assignment1View;
+@synthesize assignment2View = _assignment2View;
+@synthesize assignment3View = _assignment3View;
+@synthesize assignment4View = _assignment4View;
+@synthesize assignment5View = _assignment5View;
+@synthesize assignment6View = _assignment6View;
+@synthesize assignmentPointer = _assignmentPointer;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -117,6 +126,26 @@
 - (IBAction)addAssignment:(id)sender 
 {
     // adding assignment for each module
+    if (self.assignmentPointer == 0) {
+        self.assignment1View.hidden = NO;
+        self.assignmentPointer = 1;
+    } else if (self.assignmentPointer == 1) {
+        self.assignment2View.hidden = NO;
+        self.assignmentPointer = 2;
+    } else if (self.assignmentPointer == 2) {
+        self.assignment3View.hidden = NO;
+        self.assignmentPointer = 3;
+    } else if (self.assignmentPointer == 3) {
+        self.assignment4View.hidden = NO;
+        self.assignmentPointer = 4;
+    } else if (self.assignmentPointer == 4) {
+        self.assignment5View.hidden = NO;
+        self.assignmentPointer = 5;
+    } else if (self.assignmentPointer == 5) {
+        self.assignment6View.hidden = NO;
+        self.assignmentPointer = 6;
+        [self.buttonAddAssignment setEnabled:NO];
+    }
 }
 
 - (IBAction)setDate:(id)sender {
@@ -180,6 +209,13 @@
 {
     [super viewDidLoad];
     self.courseTabBar.delegate = self;
+    // hiding the assignment areas
+    self.assignment1View.hidden = YES;
+    self.assignment2View.hidden = YES;
+    self.assignment3View.hidden = YES;
+    self.assignment4View.hidden = YES;
+    self.assignment5View.hidden = YES;
+    self.assignment6View.hidden = YES;
     
     self.masterViewController = (ReportCardMasterViewController *)[[self.splitViewController.viewControllers objectAtIndex:0] topViewController];
     
@@ -251,6 +287,7 @@
     [self setTextBoxAssignment4Wegiht:nil];
     [self setTextBoxAssignment5Wegiht:nil];
     [self setTextBoxAssignment6Wegiht:nil];
+    [self setButtonAddAssignment:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
