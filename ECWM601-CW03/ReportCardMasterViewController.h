@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelModuleName;
 
 @property (nonatomic, strong) NSMutableArray *moduleList;
+@property (nonatomic, assign) int courseLevelId;
 
 -(void) displayLevel:(int) levelId;
 -(void) hideLevelDetails;

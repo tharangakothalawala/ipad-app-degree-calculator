@@ -69,6 +69,7 @@
 
 - (void) displayLevel:(int) levelId
 {
+    self.courseLevelId = levelId;
     self.tableView.hidden = NO;
     
     NSLog(@"LevelId %d", levelId);
@@ -348,6 +349,7 @@
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     [newManagedObject setValue:self.textBoxModuleCode.text forKey:@"moduleCode"];
     [newManagedObject setValue:self.textBoxModuleName.text forKey:@"moduleName"];
+    [newManagedObject setValue:[NSNumber numberWithInt:self.courseLevelId] forKey:@"levelId"];
     
     self.textBoxModuleCode.text = @"";
     self.textBoxModuleName.text = @"";

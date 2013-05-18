@@ -14,7 +14,7 @@
         <relationship name="modules" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="courseId" inverseEntity="Module" syncable="YES"/>
     </entity>
     <entity name="Module" syncable="YES">
-        <attribute name="credits" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="credits" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="levelId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="moduleCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="moduleId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>

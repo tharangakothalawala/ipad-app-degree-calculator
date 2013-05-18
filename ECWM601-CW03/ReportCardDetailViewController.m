@@ -164,6 +164,9 @@
     
     self.masterViewController = (ReportCardMasterViewController *)[[self.splitViewController.viewControllers objectAtIndex:0] topViewController];
     
+    // set default course level
+    self.masterViewController.courseLevelId = 4;
+    
     //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     //[[UITabBar appearance] setBackground:summaryBarItemBg];
     UIImage *summaryBarItemBg = [UIImage imageNamed:@"grad.png"];
