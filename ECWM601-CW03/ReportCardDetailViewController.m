@@ -166,6 +166,7 @@
     
     // set default course level
     self.masterViewController.courseLevelId = 4;
+    // show default level on TabBar
     
     //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     //[[UITabBar appearance] setBackground:summaryBarItemBg];

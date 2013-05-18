@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1487" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Assessment" syncable="YES">
+    <entity name="Assessment" representedClassName="Assessment" syncable="YES">
         <attribute name="assesmentDueDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="assesmentName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="assesmentWeight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -8,12 +8,12 @@
         <attribute name="assignmentMark" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="moduleId" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="assignments" inverseEntity="Module" syncable="YES"/>
     </entity>
-    <entity name="Course" syncable="YES">
+    <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="courseId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="modules" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Module" inverseName="courseId" inverseEntity="Module" syncable="YES"/>
     </entity>
-    <entity name="Module" syncable="YES">
+    <entity name="Module" representedClassName="Module" syncable="YES">
         <attribute name="credits" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="levelId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="moduleCode" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,8 +23,8 @@
         <relationship name="courseId" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="modules" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Assessment" positionX="-9" positionY="153" width="128" height="133"/>
-        <element name="Course" positionX="-290" positionY="-54" width="128" height="88"/>
-        <element name="Module" positionX="-288" positionY="138" width="128" height="150"/>
+        <element name="Assessment" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Course" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Module" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

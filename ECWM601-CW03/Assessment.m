@@ -2,17 +2,21 @@
 //  Assessment.m
 //  ECWM601-CW03
 //
-//  Created by Rasanga Perera on 15/05/2013.
+//  Created by Rasanga Perera on 18/05/2013.
 //
 //
 
 #import "Assessment.h"
+#import "Module.h"
+
 
 @implementation Assessment
 
-@synthesize assesmentName = _assesmentName;
-@synthesize assesmentDueDate = _assesmentDueDate;
-@synthesize assesmentWeight = _assesmentWeight;
-@synthesize assignmentMark = _assignmentMark;
+@dynamic assesmentDueDate;
+@dynamic assesmentName;
+@dynamic assesmentWeight;
+@dynamic assessmentId;
+@dynamic assignmentMark;
+@dynamic moduleId;
 
 @end
