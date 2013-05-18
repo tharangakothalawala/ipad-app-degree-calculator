@@ -15,6 +15,7 @@
 
 @implementation ReportCardDetailViewController
 
+@synthesize managedObjectContext = _managedObjectContext;
 @synthesize module = _module;
 @synthesize levelFourBarItem = _levelFourBarItem;
 @synthesize levelFiveBarItem = _levelFiveBarItem;
@@ -110,6 +111,7 @@
 - (IBAction)moduleDetailSave:(id)sender 
 {
     // save module details
+    [self editModuleDetails];
 }
 
 - (IBAction)addAssignment:(id)sender 
@@ -137,17 +139,24 @@
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }
     
-    [self showModuleDetails:module];
+    [self showModuleDetails];
 }
 
-- (void)showModuleDetails:(Module *)module
+- (void)showModuleDetails
 {
-    self.textBoxModuleTitle.text = module.moduleName;
+    self.textBoxModuleTitle.text = self.module.moduleName;
     
-    if (module.credits == nil) {
-        self.textBoxModuleCredit.text = [NSString stringWithFormat:@"%@", module.credits];
-    }
+//    if (self.module.credits == nil) {
+        self.textBoxModuleCredit.text = [NSString stringWithFormat:@"%@", self.module.credits];
+//    }
     
+}
+
+- (void)editModuleDetails
+{
+    self.module.moduleName = self.textBoxModuleTitle.text;
+    self.module.credits = [NSNumber numberWithInt:[self.textBoxModuleCredit.text intValue]];
+    [self.managedObjectContext save:nil];
 }
 
 - (void)configureView

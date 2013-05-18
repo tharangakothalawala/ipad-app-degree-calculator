@@ -14,6 +14,7 @@
 @interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
 
 @property (strong, nonatomic) ReportCardMasterViewController *masterViewController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) Module *module;
 

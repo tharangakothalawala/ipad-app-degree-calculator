@@ -288,7 +288,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
                             <view contentMode="scaleToFill" id="gjb-A0-kUw">
                                 <rect key="frame" x="20" y="259" width="663" height="35"/>
@@ -345,7 +345,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
                             <view contentMode="scaleToFill" id="kAX-8g-AYz">
                                 <rect key="frame" x="20" y="173" width="663" height="35"/>
@@ -402,7 +402,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
                             <view contentMode="scaleToFill" id="eUE-Wi-a8g">
                                 <rect key="frame" x="20" y="302" width="663" height="35"/>
@@ -459,7 +459,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
                             <view contentMode="scaleToFill" id="RSg-up-BaA">
                                 <rect key="frame" x="20" y="345" width="663" height="35"/>
@@ -516,7 +516,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
                             <view contentMode="scaleToFill" id="yd5-fe-No9">
                                 <rect key="frame" x="20" y="388" width="663" height="35"/>
@@ -573,7 +573,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -867,77 +867,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <resources>
         <image name="grad.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="CourseNamePopoverVIewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CourseNamePopoverVIewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="delegate"/>
-                <relationship kind="outlet" name="textboxCourseName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DatePickerPopoverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DatePickerPopoverViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="datePickerDueDate" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="delegate"/>
-            </relationships>
-        </class>
-        <class className="ReportCardDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportCardDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="courseTabBar" candidateClass="UITabBar"/>
-                <relationship kind="outlet" name="datesBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="labelFinalModuleMark" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="levelFiveBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="levelFourBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="levelSIxBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="summaryBarItem" candidateClass="UITabBarItem"/>
-                <relationship kind="outlet" name="summaryView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="textBoxAssigment1Dates" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxAssigment1Mark" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssigment2Dates" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxAssigment2Mark" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssigment3Dates" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxAssigment3Mark" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssigment4Dates" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxAssigment4Mark" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssigment5Dates" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxAssigment5Mark" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssigment6Dates" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxAssigment6Mark" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment1Title" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment1Wegiht" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment2Title" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment2Wegiht" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment3Title" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment3Wegiht" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment4Title" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment4Wegiht" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment5Title" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment5Wegiht" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment6Title" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxAssignment6Wegiht" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxModuleCredit" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxModuleTitle" candidateClass="UITextField"/>
-                <relationship kind="outletCollection" name="levelFourBarItemCollection" candidateClass="UITabBarItem"/>
-            </relationships>
-        </class>
-        <class className="ReportCardMasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportCardMasterViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="buttonCourseAdd" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="buttonModuleAdd" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="labelModuleCode" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="labelModuleName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="levelNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textBoxModuleCode" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="textBoxModuleName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SummaryView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SummaryView.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

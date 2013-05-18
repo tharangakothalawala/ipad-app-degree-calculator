@@ -80,14 +80,6 @@
 {
     self.tableView.hidden = YES;
 }
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//    indexPath.row;
-//    
-//}
-
-///////////////////////////////////////////
 
 - (void)awakeFromNib
 {
@@ -109,6 +101,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (ReportCardDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController.managedObjectContext = self.managedObjectContext;
     // Set up the edit and add buttons.
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
