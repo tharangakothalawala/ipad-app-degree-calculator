@@ -218,14 +218,14 @@
     // Create the fetch request for the entity.
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Module" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"moduleCode" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -313,12 +313,16 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = @"Module code";// [[managedObject valueForKey:@"timeStamp"] description];
-    cell.detailTextLabel.text = @"Module name";
+    cell.textLabel.text = [[managedObject valueForKey:@"moduleCode"] description];
+    cell.detailTextLabel.text = [[managedObject valueForKey:@"moduleName"] description];
 }
 
 - (void)insertNewObject
 {
+    if ([self.textBoxModuleCode.text isEqualToString:@""] || [self.textBoxModuleName.text isEqualToString:@""]) {
+        return;
+    }
+    
     // Create a new instance of the entity managed by the fetched results controller.
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
@@ -326,7 +330,11 @@
     
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    [newManagedObject setValue:self.textBoxModuleCode.text forKey:@"moduleCode"];
+    [newManagedObject setValue:self.textBoxModuleName.text forKey:@"moduleName"];
+    
+    self.textBoxModuleCode.text = @"";
+    self.textBoxModuleName.text = @"";
     
     // Save the context.
     NSError *error = nil;
