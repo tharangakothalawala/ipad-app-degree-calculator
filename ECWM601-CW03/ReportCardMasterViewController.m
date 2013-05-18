@@ -28,6 +28,7 @@
 @synthesize labelModuleCode = _labelModuleCode;
 @synthesize labelModuleName = _labelModuleName;
 @synthesize moduleList = _moduleList;
+@synthesize courseLevelId = _courseLevelId;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
