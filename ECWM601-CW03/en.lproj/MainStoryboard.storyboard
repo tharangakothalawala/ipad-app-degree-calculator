@@ -493,6 +493,15 @@
                                     <view contentMode="scaleToFill" id="Xic-pO-ICY" customClass="SummaryView">
                                         <rect key="frame" x="20" y="307" width="663" height="328"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="hfW-4S-XJT">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prediction Outcome" lineBreakMode="tailTruncation" minimumFontSize="40" id="i7F-EC-t30">
@@ -607,6 +616,9 @@
                         <outlet property="courseTabBar" destination="isg-5Y-bjR" id="iLq-T8-eJf"/>
                         <outlet property="datesBarItem" destination="XkQ-1n-fPM" id="b2H-vD-NMw"/>
                         <outlet property="labelFinalModuleMark" destination="N4f-QK-OMG" id="EnG-w4-bGn"/>
+                        <outlet property="labelLevel4Average" destination="72A-xX-hgw" id="ijn-Jx-b9o"/>
+                        <outlet property="labelLevel5Average" destination="Ga1-32-PrQ" id="E0U-hq-J1H"/>
+                        <outlet property="labelLevel6Average" destination="VIs-xI-pfA" id="HrO-kU-sKC"/>
                         <outlet property="levelFiveBarItem" destination="nbx-UE-kEx" id="1mj-9p-b8e"/>
                         <outlet property="levelFourBarItem" destination="UJe-OV-ofi" id="gh4-WZ-h7e"/>
                         <outlet property="levelSIxBarItem" destination="jw4-9A-yp4" id="R7X-Q2-wB3"/>
@@ -919,6 +931,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="datesBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="graphView" candidateClass="SummaryView"/>
                 <relationship kind="outlet" name="labelFinalModuleMark" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLevel4Average" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLevel5Average" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLevel6Average" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="levelFiveBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="levelFourBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="levelSIxBarItem" candidateClass="UITabBarItem"/>

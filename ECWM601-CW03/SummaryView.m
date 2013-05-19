@@ -33,20 +33,43 @@ float graphMarginLeft = 35;
 
 
 /*
- * Drawing the summary view line graph
+ * Drawing the summary view Bar graph
  */
 - (void)drawRect:(CGRect)rect {
     /*
-     * The code seems to be not working when the pointArray set inside the drawPaths method
-     * So I have hardcoded a smaple of points to show how I am drawing the points in the graph
+     * I have hardcoded some sample scores to show the plotting
      */
     self.scoreList = [[NSMutableArray alloc] init];
-    NSString *point1 = @"100";
-    NSString *point2 = @"100";
-    NSString *point3 = @"100";
-    NSString *point4 = @"100";
-    NSString *point5 = @"100";
-    NSString *point6 = @"100";
+    NSString *point1 = @"40";
+    NSString *point2 = @"83";
+    NSString *point3 = @"56";
+    NSString *point4 = @"76";
+    NSString *point5 = @"60";
+    NSString *point6 = @"90";
+    [self.scoreList addObject:point1];
+    [self.scoreList addObject:point2];
+    [self.scoreList addObject:point3];
+    [self.scoreList addObject:point4];
+    [self.scoreList addObject:point5];
+    [self.scoreList addObject:point6];
+    [self.scoreList addObject:point1];
+    [self.scoreList addObject:point2];
+    [self.scoreList addObject:point3];
+    [self.scoreList addObject:point4];
+    [self.scoreList addObject:point5];
+    [self.scoreList addObject:point6];
+    [self.scoreList addObject:point1];
+    [self.scoreList addObject:point2];
+    [self.scoreList addObject:point3];
+    [self.scoreList addObject:point4];
+    [self.scoreList addObject:point5];
+    [self.scoreList addObject:point6];
+    [self.scoreList addObject:point1];
+    [self.scoreList addObject:point2];
+    [self.scoreList addObject:point3];
+    [self.scoreList addObject:point4];
+    [self.scoreList addObject:point5];
+    [self.scoreList addObject:point6];
     [self.scoreList addObject:point1];
     [self.scoreList addObject:point2];
     [self.scoreList addObject:point3];
@@ -99,16 +122,16 @@ float graphMarginLeft = 35;
     CGContextSelectFont(context, "Arial", 15.f, kCGEncodingMacRoman); // setting the font properties. (font-family, font-weight, encoding type)
     CGContextSetTextDrawingMode(context, kCGTextFillStroke);
     
-    CGFloat scoreGap = (self.bounds.size.width - graphMarginLeft-20 ) / [self.scoreList count];
+    //CGFloat scoreGap = (self.bounds.size.width - graphMarginLeft-20 ) / [self.scoreList count];
     
     // creating ... in X axis (-)
-    CGFloat xPlusDigitGap = scoreGap+(graphMarginBottom);
+    /*CGFloat xPlusDigitGap = scoreGap+(graphMarginBottom);
     for (int i = 0; i <= [self.scoreList count]; i++) {
         NSString* index = [NSString stringWithFormat:@"%d", i*20];
         const char* number = [index UTF8String];
         CGContextShowTextAtPoint(context, xPlusDigitGap, (self.bounds.size.height-20), number, index.length);
         xPlusDigitGap = xPlusDigitGap + scoreGap;
-    }
+    }//*/
     
     // creating score digits in Y axis (|)
     CGFloat yPlusDigitGap = (self.bounds.size.height) - graphMarginBottom;

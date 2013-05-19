@@ -82,6 +82,11 @@
 @property (strong, nonatomic) NSDate *assignment5DueDate;
 @property (strong, nonatomic) NSDate *assignment6DueDate;
 
+@property (weak, nonatomic) IBOutlet UILabel *labelLevel4Average;
+@property (weak, nonatomic) IBOutlet UILabel *labelLevel5Average;
+@property (weak, nonatomic) IBOutlet UILabel *labelLevel6Average;
+
+
 - (void)setDefaultLevel:(int) levelId;
 - (NSMutableArray *)fetchAssignments;
 
