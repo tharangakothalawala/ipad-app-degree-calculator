@@ -384,6 +384,9 @@
     [item4 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];//*/
     //*/
     
+    self.summaryView.hidden = YES;
+    self.bottomModuleView.hidden = NO;
+    
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
