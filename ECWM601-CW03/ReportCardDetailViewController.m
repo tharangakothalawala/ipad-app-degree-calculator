@@ -83,6 +83,7 @@
 @synthesize labelLevel4Average = _labelLevel4Average;
 @synthesize labelLevel5Average = _labelLevel5Average;
 @synthesize labelLevel6Average = _labelLevel6Average;
+@synthesize labelAwardPredictionResult = _labelAwardPredictionResult;
 
 @synthesize graphView = _graphView;
 @synthesize scoreList = _scoreList;
@@ -139,24 +140,24 @@
         [module1AssessmentDetailArray addObject:module1Assessment3WeightAndMark];
         double module1Overall = [calculations getModuleOverall:module1AssessmentDetailArray];
         NSString *module1OverallStr = [NSString stringWithFormat:@"%f", module1Overall];
-        NSLog(@"module1Overall : %@", module1OverallStr);
+        NSLog(@"module1Overall : %g", module1Overall);
 
         // Level 4, Module 2 : Assessments
         NSMutableArray *module2AssessmentDetailArray = [[NSMutableArray alloc]initWithCapacity:3];
-        NSString *module2Assessment1WeightAndMark = @"30:73";
-        NSString *module2Assessment2WeightAndMark = @"30:81";
-        NSString *module2Assessment3WeightAndMark = @"40:50";
+        NSString *module2Assessment1WeightAndMark = @"30:63";
+        NSString *module2Assessment2WeightAndMark = @"30:71";
+        NSString *module2Assessment3WeightAndMark = @"40:60";
         [module2AssessmentDetailArray addObject:module2Assessment1WeightAndMark];
         [module2AssessmentDetailArray addObject:module2Assessment2WeightAndMark];
         [module2AssessmentDetailArray addObject:module2Assessment3WeightAndMark];
         double module2Overall = [calculations getModuleOverall:module2AssessmentDetailArray];
         NSString *module2OverallStr = [NSString stringWithFormat:@"%f", module2Overall];
-        NSLog(@"module2Overall : %@", module2OverallStr);
+        NSLog(@"module2Overall : %g", module2Overall);
 
         // Level 4, Module 3 : Assessments
         NSMutableArray *module3AssessmentDetailArray = [[NSMutableArray alloc]initWithCapacity:3];
-        NSString *module3Assessment1WeightAndMark = @"30:73";
-        NSString *module3Assessment2WeightAndMark = @"30:81";
+        NSString *module3Assessment1WeightAndMark = @"30:83";
+        NSString *module3Assessment2WeightAndMark = @"30:61";
         NSString *module3Assessment3WeightAndMark = @"40:50";
         [module3AssessmentDetailArray addObject:module3Assessment1WeightAndMark];
         [module3AssessmentDetailArray addObject:module3Assessment2WeightAndMark];
@@ -173,8 +174,20 @@
         double level4Overall = [calculations getLevelOverall:level4DetailArray];
         NSString *level4OverallStr = [NSString stringWithFormat:@"%f", level4Overall];
         NSLog(@"level4Overall : %@", level4OverallStr);
+        
+        
+        // Degree award prediction
+        NSString *predictedAward = [calculations getdegreePrediction:level4Overall];
+        self.labelAwardPredictionResult.text = predictedAward;
+        NSLog(@"predictedAward : %@", predictedAward);
+        // ANSWER: 2013-05-19 23:15:37.913 ECWM601-CW03[5229:207] predictedAward : Upper Second
+        
+        self.labelLevel4Average.text = level4OverallStr;
 
         // END  - dummy data for the calculations //////////////////////////
+
+
+
 
         self.summaryView.hidden = NO;
         self.bottomModuleView.hidden = YES;
@@ -502,6 +515,7 @@
     [self setLabelLevel4Average:nil];
     [self setLabelLevel5Average:nil];
     [self setLabelLevel6Average:nil];
+    [self setLabelAwardPredictionResult:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -85,6 +85,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelLevel4Average;
 @property (weak, nonatomic) IBOutlet UILabel *labelLevel5Average;
 @property (weak, nonatomic) IBOutlet UILabel *labelLevel6Average;
+@property (weak, nonatomic) IBOutlet UILabel *labelAwardPredictionResult;
 
 
 - (void)setDefaultLevel:(int) levelId;

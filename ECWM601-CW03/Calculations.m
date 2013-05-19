@@ -11,9 +11,9 @@
 @implementation Calculations
 
 - (double)getModuleOverall:(NSMutableArray *)moduleAssessmentDetailArray {
-    double result = 0;
+    double moduleOverall = 0;
     
-    NSLog(@"getModuleOverall:moduleAssessmentDetailArray : %@", moduleAssessmentDetailArray);
+    //NSLog(@"getModuleOverall:moduleAssessmentDetailArray : %@", moduleAssessmentDetailArray);
     int assessmentCount = [moduleAssessmentDetailArray count];
     double eachAssessmentOverall = 0;
     for (int i = 0; i < assessmentCount; i++) {
@@ -25,33 +25,36 @@
         eachAssessmentOverall += (mark / 100) * weight;
     }
     NSLog(@"moduleOverall : %g", eachAssessmentOverall);
+    moduleOverall = eachAssessmentOverall;
     
-    return result;
+    return moduleOverall;
 }
 
 - (double)getLevelOverall:(NSMutableArray *)moduleDetailArray {
-    double result = 0;
-    
+    //NSLog(@"getModuleOverall:moduleDetailArray : %@", moduleDetailArray);
     int moduleCount = [moduleDetailArray count];
     
+    double eachModuleOverallResult = 0.0;
     for (int i = 0; i < moduleCount; i++) {
-        int eachModuleOverallResult = (int) [moduleDetailArray objectAtIndex:i];
-        result += eachModuleOverallResult;
+        eachModuleOverallResult += [[moduleDetailArray objectAtIndex:i] doubleValue];
     }
+    eachModuleOverallResult = eachModuleOverallResult / moduleCount;
     
-    return result;
+    return eachModuleOverallResult;
 }
 
-- (double)getdegreeOverall:(NSMutableArray *)levelDetailArray {
-    double result = 0;
+- (NSString*)getdegreePrediction:(double)levelOverall {
+    NSString *result = @"";
     
-    int levelCount = [levelDetailArray count];
-    
-    for (int i = 0; i < levelCount; i++) {
-        int eachLevelOverall = (int) [levelDetailArray objectAtIndex:i];
-        result += eachLevelOverall;
+    if (levelOverall > 70.0) {
+        return @"First";
+    } else if (levelOverall > 60.0) {
+        return @"Upper Second";
+    } else if (levelOverall > 50.0) {
+        return @"Lower Second";
+    } else if (levelOverall > 40.0) {
+        return @"Third";
     }
-    
     
     return result;
 }

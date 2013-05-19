@@ -540,7 +540,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="..." lineBreakMode="tailTruncation" minimumFontSize="20" id="72A-xX-hgw">
-                                        <rect key="frame" x="212" y="130" width="55" height="24"/>
+                                        <rect key="frame" x="212" y="130" width="157" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -554,14 +554,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="..." lineBreakMode="tailTruncation" minimumFontSize="20" id="Ga1-32-PrQ">
-                                        <rect key="frame" x="212" y="175" width="55" height="24"/>
+                                        <rect key="frame" x="212" y="175" width="157" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="..." lineBreakMode="tailTruncation" minimumFontSize="20" id="VIs-xI-pfA">
-                                        <rect key="frame" x="212" y="221" width="55" height="24"/>
+                                        <rect key="frame" x="212" y="221" width="157" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -615,6 +615,7 @@
                         <outlet property="buttonAddAssignment" destination="5hY-30-Ge6" id="uku-YZ-bd2"/>
                         <outlet property="courseTabBar" destination="isg-5Y-bjR" id="iLq-T8-eJf"/>
                         <outlet property="datesBarItem" destination="XkQ-1n-fPM" id="b2H-vD-NMw"/>
+                        <outlet property="labelAwardPredictionResult" destination="0ia-kl-mUI" id="p6B-f4-TvO"/>
                         <outlet property="labelFinalModuleMark" destination="N4f-QK-OMG" id="EnG-w4-bGn"/>
                         <outlet property="labelLevel4Average" destination="72A-xX-hgw" id="ijn-Jx-b9o"/>
                         <outlet property="labelLevel5Average" destination="Ga1-32-PrQ" id="E0U-hq-J1H"/>
@@ -934,6 +935,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="courseTabBar" candidateClass="UITabBar"/>
                 <relationship kind="outlet" name="datesBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="graphView" candidateClass="SummaryView"/>
+                <relationship kind="outlet" name="labelAwardPredictionResult" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelFinalModuleMark" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLevel4Average" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLevel5Average" candidateClass="UILabel"/>

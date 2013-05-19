@@ -12,6 +12,6 @@
 
 - (double) getModuleOverall: (NSMutableArray*) moduleAssessmentDetailArray;
 - (double) getLevelOverall: (NSMutableArray*) moduleDetailArray;
-- (double) getdegreeOverall: (NSMutableArray*) levelDetailArray;
+- (NSString*)getdegreePrediction:(double)levelOverall;
 
 @end
