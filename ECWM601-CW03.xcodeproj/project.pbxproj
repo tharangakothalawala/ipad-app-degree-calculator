@@ -27,6 +27,7 @@
 		C0B47F5417465AC900BD7DF5 /* CourseNamePopoverVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B47F5317465AC900BD7DF5 /* CourseNamePopoverVIewController.m */; };
 		C0B47F5817466BDA00BD7DF5 /* DatePickerPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B47F5717466BDA00BD7DF5 /* DatePickerPopoverViewController.m */; };
 		CE7A96AA1744FDAE0017B0CB /* SummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A96A91744FDAE0017B0CB /* SummaryView.m */; };
+		CEAB12061749492B00C41441 /* Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAB12051749492B00C41441 /* Calculations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		C0B47F5717466BDA00BD7DF5 /* DatePickerPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerPopoverViewController.m; sourceTree = "<group>"; };
 		CE7A96A81744FDAE0017B0CB /* SummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryView.h; sourceTree = "<group>"; };
 		CE7A96A91744FDAE0017B0CB /* SummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryView.m; sourceTree = "<group>"; };
+		CEAB12041749492B00C41441 /* Calculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculations.h; sourceTree = "<group>"; };
+		CEAB12051749492B00C41441 /* Calculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculations.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				0C987A7B1747F3EC00FD8215 /* Module.m */,
 				0C987A771747F3EC00FD8215 /* Course.h */,
 				0C987A781747F3EC00FD8215 /* Course.m */,
+				CEAB12041749492B00C41441 /* Calculations.h */,
+				CEAB12051749492B00C41441 /* Calculations.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				0C987A791747F3EC00FD8215 /* Course.m in Sources */,
 				0C987A7C1747F3ED00FD8215 /* Module.m in Sources */,
 				0C987A7F1747F3ED00FD8215 /* Assessment.m in Sources */,
+				CEAB12061749492B00C41441 /* Calculations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

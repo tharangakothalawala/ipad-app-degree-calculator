@@ -176,6 +176,8 @@
     if (self.assignmentPointer == 1 &&  !([self.textBoxAssignment1Title.text isEqualToString:@""])) {
         self.assignment2View.hidden = NO;
         self.assignmentPointer = 2;
+        
+        [self editAssignment1];
     } else if (self.assignmentPointer == 1) {
         [self.textBoxAssignment1Title becomeFirstResponder];
     }
@@ -183,6 +185,7 @@
     if (self.assignmentPointer == 2 &&  !([self.textBoxAssignment2Title.text isEqualToString:@""])) {
         self.assignment3View.hidden = NO;
         self.assignmentPointer = 3;
+        [self editAssignment1];
     } else if (self.assignmentPointer == 2) {
         [self.textBoxAssignment2Title becomeFirstResponder];
     }
@@ -231,6 +234,7 @@
     }
     
     [self showModuleDetails];
+    [self fetchAssignments];
 }
 
 - (void)showModuleDetails
@@ -318,6 +322,18 @@
     self.module.moduleName = self.textBoxModuleTitle.text;
     self.module.credits = [NSNumber numberWithInt:[self.textBoxModuleCredit.text intValue]];
     [self.managedObjectContext save:nil];
+}
+
+- (NSMutableArray *)fetchAssignments
+{
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Assessment"];
+    //fetchRequest.sortDescriptors = @[NSSortDescriptor sortDescriptorWithKey:@"assessmentId" ascending:YES]]; // TODO
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"module = %@", self.module];
+    
+    NSError *error;
+    NSMutableArray *mutableFetchResults = [[self.managedObjectContext
+                                            executeFetchRequest:fetchRequest error:&error] mutableCopy];
+    return mutableFetchResults;
 }
 
 - (void)setDefaultLevel:(int) levelId

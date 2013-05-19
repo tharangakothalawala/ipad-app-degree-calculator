@@ -82,5 +82,6 @@
 @property (strong, nonatomic) NSDate *assignment6DueDate;
 
 - (void)setDefaultLevel:(int) levelId;
+- (NSMutableArray *)fetchAssignments;
 
 @end

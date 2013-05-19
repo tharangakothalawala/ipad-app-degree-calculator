@@ -263,11 +263,7 @@
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
-//    
-//    NSMutableArray *mutableFetchResults = [[self.managedObjectContext 
-//                                            executeFetchRequest:fetchRequest error:&error] mutableCopy];
-//    
-    
+
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"levelId = %d", self.courseLevelId];
     //    NSLog(@"levelId = %d", self.courseLevelId);
     //        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", @"Test"];
@@ -278,6 +274,11 @@
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSError *error;
+    NSMutableArray *mutableFetchResults = [[self.managedObjectContext
+                                            executeFetchRequest:fetchRequest error:&error] mutableCopy];
+    
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
