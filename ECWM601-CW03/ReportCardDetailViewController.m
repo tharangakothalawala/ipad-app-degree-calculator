@@ -432,33 +432,20 @@
     self.assignment6View.hidden = YES;
     
     self.masterViewController = (ReportCardMasterViewController *)[[self.splitViewController.viewControllers objectAtIndex:0] topViewController];
-    
-    /*UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [[UITabBar appearance] setBackground:summaryBarItemBg];//*/
-    
-    UIImage *tabBackground = [[UIImage imageNamed:@"grad.jpg"] 
-                              resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    // Set background for all UITabBars
-    [[UITabBar appearance] setBackgroundImage:tabBackground];
-    // Set background for only this UITabBar
-    [[self.tabBarController tabBar] setBackgroundImage:tabBackground];
-    
-    /*UIImage *summaryBarItemBg = [UIImage imageNamed:@"grad.png"];
+
+    // Setting icons for the UITabBar
     UITabBar *tabbar = self.tabBarController.tabBar;
     UITabBarItem *item0 = [tabbar.items objectAtIndex:0];
     UITabBarItem *item1 = [tabbar.items objectAtIndex:1];
     UITabBarItem *item2 = [tabbar.items objectAtIndex:2];
     UITabBarItem *item3 = [tabbar.items objectAtIndex:3];
     UITabBarItem *item4 = [tabbar.items objectAtIndex:4];
-    
-    summaryBarItemBg = nil;
-    
-    [item0 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
-    [item1 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
-    [item2 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
-    [item3 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
-    [item4 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];//*/
-    //*/
+    item0.image = [UIImage imageNamed:@"level4.png"];
+    item1.image = [UIImage imageNamed:@"level5.png"];
+    item2.image = [UIImage imageNamed:@"level6.png"];
+    item3.image = [UIImage imageNamed:@"dates.png"];
+    item4.image = [UIImage imageNamed:@"summary_graduation.png"];
+
     
     self.summaryView.hidden = YES;
     self.bottomModuleView.hidden = NO;

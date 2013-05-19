@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C987A751747F11400FD8215 /* grad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C987A741747F11400FD8215 /* grad.png */; };
 		0C987A791747F3EC00FD8215 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A781747F3EC00FD8215 /* Course.m */; };
 		0C987A7C1747F3ED00FD8215 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7B1747F3EC00FD8215 /* Module.m */; };
 		0C987A7F1747F3ED00FD8215 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7E1747F3ED00FD8215 /* Assessment.m */; };
@@ -26,10 +25,14 @@
 		C0B47F5817466BDA00BD7DF5 /* DatePickerPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B47F5717466BDA00BD7DF5 /* DatePickerPopoverViewController.m */; };
 		CE7A96AA1744FDAE0017B0CB /* SummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A96A91744FDAE0017B0CB /* SummaryView.m */; };
 		CEAB12061749492B00C41441 /* Calculations.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAB12051749492B00C41441 /* Calculations.m */; };
+		CEDAB6C717497FD900347AB8 /* level4.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAB6C417497FD800347AB8 /* level4.png */; };
+		CEDAB6C817497FD900347AB8 /* level5.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAB6C517497FD800347AB8 /* level5.png */; };
+		CEDAB6C917497FD900347AB8 /* level6.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAB6C617497FD900347AB8 /* level6.png */; };
+		CEDAB6CB1749809D00347AB8 /* dates.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAB6CA1749809D00347AB8 /* dates.png */; };
+		CEDAB6CD174981C100347AB8 /* summary_graduation.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDAB6CC174981C100347AB8 /* summary_graduation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C987A741747F11400FD8215 /* grad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grad.png; sourceTree = SOURCE_ROOT; };
 		0C987A771747F3EC00FD8215 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		0C987A781747F3EC00FD8215 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		0C987A7A1747F3EC00FD8215 /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
@@ -61,6 +64,11 @@
 		CE7A96A91744FDAE0017B0CB /* SummaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryView.m; sourceTree = "<group>"; };
 		CEAB12041749492B00C41441 /* Calculations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculations.h; sourceTree = "<group>"; };
 		CEAB12051749492B00C41441 /* Calculations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculations.m; sourceTree = "<group>"; };
+		CEDAB6C417497FD800347AB8 /* level4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level4.png; sourceTree = "<group>"; };
+		CEDAB6C517497FD800347AB8 /* level5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level5.png; sourceTree = "<group>"; };
+		CEDAB6C617497FD900347AB8 /* level6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = level6.png; sourceTree = "<group>"; };
+		CEDAB6CA1749809D00347AB8 /* dates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dates.png; sourceTree = "<group>"; };
+		CEDAB6CC174981C100347AB8 /* summary_graduation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary_graduation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +132,11 @@
 		49A54CE71742694B00FE3A59 /* ECWM601-CW03 */ = {
 			isa = PBXGroup;
 			children = (
-				0C987A741747F11400FD8215 /* grad.png */,
+				CEDAB6CC174981C100347AB8 /* summary_graduation.png */,
+				CEDAB6CA1749809D00347AB8 /* dates.png */,
+				CEDAB6C417497FD800347AB8 /* level4.png */,
+				CEDAB6C517497FD800347AB8 /* level5.png */,
+				CEDAB6C617497FD900347AB8 /* level6.png */,
 				CE7A96A61744FD8C0017B0CB /* view */,
 				0C40147D17436B1400EEBB67 /* model */,
 				49A54CF01742694B00FE3A59 /* ReportCardAppDelegate.h */,
@@ -215,8 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A54CEC1742694B00FE3A59 /* InfoPlist.strings in Resources */,
-				0C987A751747F11400FD8215 /* grad.png in Resources */,
 				491B9EB01749203800CFA53F /* MainStoryboard.storyboard in Resources */,
+				CEDAB6C717497FD900347AB8 /* level4.png in Resources */,
+				CEDAB6C817497FD900347AB8 /* level5.png in Resources */,
+				CEDAB6C917497FD900347AB8 /* level6.png in Resources */,
+				CEDAB6CB1749809D00347AB8 /* dates.png in Resources */,
+				CEDAB6CD174981C100347AB8 /* summary_graduation.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

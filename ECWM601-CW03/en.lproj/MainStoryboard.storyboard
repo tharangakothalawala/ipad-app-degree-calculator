@@ -32,11 +32,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Level 4" id="UJe-OV-ofi"/>
-                                    <tabBarItem title="Level 5" id="nbx-UE-kEx"/>
-                                    <tabBarItem title="Level 6" id="jw4-9A-yp4"/>
-                                    <tabBarItem title="Dates" id="XkQ-1n-fPM"/>
-                                    <tabBarItem title="Summary" image="grad.png" id="xHF-Rj-MM4"/>
+                                    <tabBarItem title="Level 4" image="level4.png" id="UJe-OV-ofi"/>
+                                    <tabBarItem title="Level 5" image="level5.png" id="nbx-UE-kEx"/>
+                                    <tabBarItem title="Level 6" image="level6.png" id="jw4-9A-yp4"/>
+                                    <tabBarItem title="Dates" image="dates.png" id="XkQ-1n-fPM"/>
+                                    <tabBarItem title="Summary" image="summary_graduation.png" id="xHF-Rj-MM4"/>
                                 </items>
                             </tabBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="CW1-jA-EQo">
@@ -899,7 +899,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="grad.png" width="128" height="128"/>
+        <image name="dates.png" width="32" height="32"/>
+        <image name="level4.png" width="32" height="32"/>
+        <image name="level5.png" width="32" height="32"/>
+        <image name="level6.png" width="32" height="32"/>
+        <image name="summary_graduation.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="CourseNamePopoverVIewController" superclassName="UIViewController">
