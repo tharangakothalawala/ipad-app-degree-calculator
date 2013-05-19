@@ -59,6 +59,7 @@
 @synthesize summaryView = _summaryView;
 
 @synthesize dueDateIdentifier = _dueDateIdentifier;
+@synthesize bottomModuleView = _bottomModuleView;
 @synthesize textBoxAssignment2Wegiht = _textBoxAssignment2Wegiht;
 @synthesize textBoxAssignment3Wegiht = _textBoxAssignment3Wegiht;
 @synthesize textBoxAssignment4Wegiht = _textBoxAssignment4Wegiht;
@@ -80,6 +81,9 @@
 @synthesize assignment5DueDate = _assignment5DueDate;
 @synthesize assignment6DueDate = _assignment6DueDate;
 
+@synthesize graphView = _graphView;
+@synthesize scoreList = _scoreList;
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"datePickerPopover"]) {
@@ -93,16 +97,19 @@
     if ([string isEqualToString:@"Level 4"])
     {
         self.summaryView.hidden = YES;
+        self.bottomModuleView.hidden = NO;
         self.title = @" - Level 4";
         [self.masterViewController displayLevel:4];
     } else if ([string isEqualToString:@"Level 5"])
     {
         self.summaryView.hidden = YES;
+        self.bottomModuleView.hidden = NO;
         self.title = @" - Level 5";
         [self.masterViewController displayLevel:5];
     } else if ([string isEqualToString:@"Level 6"])
     {
         self.summaryView.hidden = YES;
+        self.bottomModuleView.hidden = NO;
         self.title = @" - Level 6";
         [self.masterViewController displayLevel:6];
     } else if ([string isEqualToString:@"Dates"])
@@ -113,7 +120,31 @@
     } else if ([string isEqualToString:@"Summary"])
     {
         self.summaryView.hidden = NO;
+        self.bottomModuleView.hidden = YES;
         self.title = @"Summary";
+        
+        //self.scoreList = [[NSMutableArray alloc] init];
+        NSString *point1 = @"90";
+        NSString *point2 = @"100";
+        NSString *point3 = @"70";
+        NSString *point4 = @"60";
+        NSString *point5 = @"80";
+        NSString *point6 = @"40";
+        [self.scoreList addObject:point1];
+        [self.scoreList addObject:point2];
+        [self.scoreList addObject:point3];
+        [self.scoreList addObject:point4];
+        [self.scoreList addObject:point5];
+        [self.scoreList addObject:point6];
+        
+        [self.scoreList addObject:point1];
+        [self.scoreList addObject:point2];
+        [self.scoreList addObject:point3];
+        [self.scoreList addObject:point4];
+        [self.scoreList addObject:point5];
+        [self.scoreList addObject:point6];//*/
+        [self.graphView drawGraph:self.scoreList];
+        
         [self.masterViewController hideLevelDetails];
     } 
     
@@ -142,22 +173,40 @@
 - (IBAction)addAssignment:(id)sender
 {
     // adding assignment for each module
-    if (self.assignmentPointer == 1) {
+    if (self.assignmentPointer == 1 &&  !([self.textBoxAssignment1Title.text isEqualToString:@""])) {
         self.assignment2View.hidden = NO;
         self.assignmentPointer = 2;
-    } else if (self.assignmentPointer == 2) {
+    } else if (self.assignmentPointer == 1) {
+        [self.textBoxAssignment1Title becomeFirstResponder];
+    }
+    
+    if (self.assignmentPointer == 2 &&  !([self.textBoxAssignment2Title.text isEqualToString:@""])) {
         self.assignment3View.hidden = NO;
         self.assignmentPointer = 3;
-    } else if (self.assignmentPointer == 3) {
+    } else if (self.assignmentPointer == 2) {
+        [self.textBoxAssignment2Title becomeFirstResponder];
+    }
+    
+    if (self.assignmentPointer == 3 &&  !([self.textBoxAssignment3Title.text isEqualToString:@""])) {
         self.assignment4View.hidden = NO;
         self.assignmentPointer = 4;
-    } else if (self.assignmentPointer == 4) {
+    } else if (self.assignmentPointer == 3) {
+        [self.textBoxAssignment3Title becomeFirstResponder];
+    }
+    
+    if (self.assignmentPointer == 4 &&  !([self.textBoxAssignment4Title.text isEqualToString:@""])) {
         self.assignment5View.hidden = NO;
         self.assignmentPointer = 5;
-    } else if (self.assignmentPointer == 5) {
+    } else if (self.assignmentPointer == 4) {
+        [self.textBoxAssignment4Title becomeFirstResponder];
+    }
+    
+    if (self.assignmentPointer == 5 &&  !([self.textBoxAssignment5Title.text isEqualToString:@""])) {
         self.assignment6View.hidden = NO;
         self.assignmentPointer = 6;
         [self.buttonAddAssignment setEnabled:NO];
+    } else if (self.assignmentPointer == 5) {
+        [self.textBoxAssignment5Title becomeFirstResponder];
     }
 }
 
@@ -383,6 +432,7 @@
     [self setTextBoxAssignment5Wegiht:nil];
     [self setTextBoxAssignment6Wegiht:nil];
     [self setButtonAddAssignment:nil];
+    [self setBottomModuleView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

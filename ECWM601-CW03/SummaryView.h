@@ -19,4 +19,6 @@
 // scoreList to hold the module scores
 @property (nonatomic, strong) NSMutableArray* scoreList;
 
+- (void) drawGraph:(NSMutableArray*) scoreArray;
+
 @end

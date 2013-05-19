@@ -12,6 +12,7 @@
 		0C987A791747F3EC00FD8215 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A781747F3EC00FD8215 /* Course.m */; };
 		0C987A7C1747F3ED00FD8215 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7B1747F3EC00FD8215 /* Module.m */; };
 		0C987A7F1747F3ED00FD8215 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7E1747F3ED00FD8215 /* Assessment.m */; };
+		491B9EB01749203800CFA53F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A54CF31742694B00FE3A59 /* MainStoryboard.storyboard */; };
 		49A54CE01742694B00FE3A59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CDF1742694B00FE3A59 /* UIKit.framework */; };
 		49A54CE21742694B00FE3A59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE11742694B00FE3A59 /* Foundation.framework */; };
 		49A54CE41742694B00FE3A59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A54CE31742694B00FE3A59 /* CoreGraphics.framework */; };
@@ -19,7 +20,6 @@
 		49A54CEC1742694B00FE3A59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49A54CEA1742694B00FE3A59 /* InfoPlist.strings */; };
 		49A54CEE1742694B00FE3A59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CED1742694B00FE3A59 /* main.m */; };
 		49A54CF21742694B00FE3A59 /* ReportCardAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CF11742694B00FE3A59 /* ReportCardAppDelegate.m */; };
-		49A54CF51742694B00FE3A59 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A54CF31742694B00FE3A59 /* MainStoryboard.storyboard */; };
 		49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */; };
 		49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */; };
 		49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */; };
@@ -220,8 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A54CEC1742694B00FE3A59 /* InfoPlist.strings in Resources */,
-				49A54CF51742694B00FE3A59 /* MainStoryboard.storyboard in Resources */,
 				0C987A751747F11400FD8215 /* grad.png in Resources */,
+				491B9EB01749203800CFA53F /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@
 #import "ReportCardMasterViewController.h"
 #import "Assessment.h"
 #import "Module.h"
+#import "SummaryView.h"
 
 @interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
 
@@ -18,6 +19,8 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) Module *module;
+@property (strong, nonatomic) IBOutlet SummaryView *graphView;
+@property (nonatomic, strong) NSMutableArray *scoreList;
 
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFourBarItem;
 @property (weak, nonatomic) IBOutlet UITabBarItem *levelFiveBarItem;
@@ -59,6 +62,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textBoxAssignment6Wegiht;
 
 @property (assign, nonatomic) int dueDateIdentifier;
+@property (weak, nonatomic) IBOutlet UIView *bottomModuleView;
 
 @property (weak, nonatomic) IBOutlet UIView *assignment1View;
 @property (weak, nonatomic) IBOutlet UIView *assignment2View;

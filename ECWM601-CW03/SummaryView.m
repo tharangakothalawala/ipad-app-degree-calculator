@@ -24,6 +24,13 @@ float graphMarginLeft = 35;
     return self;
 }
 
+- (void) drawGraph:(NSMutableArray*) scoreArray {
+    NSLog(@"UIView:drawGraph %@", scoreArray);
+    self.scoreList = scoreArray;
+    
+    [self setNeedsDisplay];
+}
+
 
 /*
  * Drawing the summary view line graph
@@ -34,12 +41,12 @@ float graphMarginLeft = 35;
      * So I have hardcoded a smaple of points to show how I am drawing the points in the graph
      */
     self.scoreList = [[NSMutableArray alloc] init];
-    NSString *point1 = @"90";
+    NSString *point1 = @"100";
     NSString *point2 = @"100";
-    NSString *point3 = @"70";
-    NSString *point4 = @"60";
-    NSString *point5 = @"80";
-    NSString *point6 = @"40";
+    NSString *point3 = @"100";
+    NSString *point4 = @"100";
+    NSString *point5 = @"100";
+    NSString *point6 = @"100";
     [self.scoreList addObject:point1];
     [self.scoreList addObject:point2];
     [self.scoreList addObject:point3];
