@@ -119,6 +119,18 @@
         NSLog(@"Dates");
     } else if ([string isEqualToString:@"Summary"])
     {
+        NSMutableArray *assessmentDetailArray = [[NSMutableArray alloc]initWithCapacity:3];
+        NSString *assessment1WeightAndMark = @"30:73";
+        NSString *assessment2WeightAndMark = @"30:81";
+        NSString *assessment3WeightAndMark = @"40:50";
+        [assessmentDetailArray addObject:assessment1WeightAndMark];
+        [assessmentDetailArray addObject:assessment2WeightAndMark];
+        [assessmentDetailArray addObject:assessment3WeightAndMark];
+        Calculations *calculations = [[Calculations alloc]init];
+        double module1Overall = [calculations getModuleOverall:assessmentDetailArray];
+        NSLog(@"@wwww %g", module1Overall);
+        
+        ////////////////////////////////////////////////
         self.summaryView.hidden = NO;
         self.bottomModuleView.hidden = YES;
         self.title = @"Summary";
@@ -282,6 +294,7 @@
     [assessment setAssesmentDueDate:self.assignment3DueDate];
     [self.managedObjectContext save:nil];
 }
+
 - (void)editAssignment4
 {
     Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 

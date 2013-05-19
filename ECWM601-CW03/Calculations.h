@@ -10,8 +10,8 @@
 
 @interface Calculations : NSObject
 
-- (double)getModuleOverall:(NSMutableArray *)moduleAssessmentDetailArray;
-- (double)getLevelOverall:(NSMutableArray *)moduleDetailArray;
-- (double)getdegreeOverall:(NSMutableArray *)levelDetailArray;
+- (double) getModuleOverall: (NSMutableArray*) moduleAssessmentDetailArray;
+- (double) getLevelOverall: (NSMutableArray*) moduleDetailArray;
+- (double) getdegreeOverall: (NSMutableArray*) levelDetailArray;
 
 @end

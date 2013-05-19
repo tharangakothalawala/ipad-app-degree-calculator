@@ -12,6 +12,7 @@
 #import "Assessment.h"
 #import "Module.h"
 #import "SummaryView.h"
+#import "Calculations.h"
 
 @interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
 
