@@ -69,4 +69,7 @@
 
 // Summary View
 @property (weak, nonatomic) IBOutlet UIView *summaryView;
+
+- (void)setDefaultLevel:(int) levelId;
+
 @end

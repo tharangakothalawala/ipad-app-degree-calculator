@@ -101,6 +101,7 @@
     } else if ([string isEqualToString:@"Dates"])
     {
         self.summaryView.hidden = YES;
+        [self.masterViewController showDaysLeft];
         NSLog(@"Dates");
     } else if ([string isEqualToString:@"Summary"])
     {
@@ -131,10 +132,7 @@
 - (IBAction)addAssignment:(id)sender
 {
     // adding assignment for each module
-    if (self.assignmentPointer == 0) {
-        self.assignment1View.hidden = NO;
-        self.assignmentPointer = 1;
-    } else if (self.assignmentPointer == 1) {
+    if (self.assignmentPointer == 1) {
         self.assignment2View.hidden = NO;
         self.assignmentPointer = 2;
     } else if (self.assignmentPointer == 2) {
@@ -188,7 +186,8 @@
 
 - (void)editAssignment1
 {
-    
+    // show default level on TabBar
+    [self.tabBarController setSelectedIndex:0];
 }
 
 - (void)editModuleDetails
@@ -196,6 +195,11 @@
     self.module.moduleName = self.textBoxModuleTitle.text;
     self.module.credits = [NSNumber numberWithInt:[self.textBoxModuleCredit.text intValue]];
     [self.managedObjectContext save:nil];
+}
+
+- (void)setDefaultLevel:(int) levelId
+{
+    
 }
 
 - (void)configureView
@@ -219,6 +223,7 @@
 {
     [super viewDidLoad];
     self.courseTabBar.delegate = self;
+    self.assignmentPointer = 1;
     // hiding the assignment areas
     self.assignment2View.hidden = YES;
     self.assignment3View.hidden = YES;
@@ -228,12 +233,17 @@
     
     self.masterViewController = (ReportCardMasterViewController *)[[self.splitViewController.viewControllers objectAtIndex:0] topViewController];
     
-    // set default course level
-    self.masterViewController.courseLevelId = 4;
+    /*UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [[UITabBar appearance] setBackground:summaryBarItemBg];//*/
     
-    //UIImage *summaryBarItemBg = [[UIImage imageNamed:@"grad.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    //[[UITabBar appearance] setBackground:summaryBarItemBg];
-    UIImage *summaryBarItemBg = [UIImage imageNamed:@"grad.png"];
+    UIImage *tabBackground = [[UIImage imageNamed:@"grad.jpg"] 
+                              resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    // Set background for all UITabBars
+    [[UITabBar appearance] setBackgroundImage:tabBackground];
+    // Set background for only this UITabBar
+    [[self.tabBarController tabBar] setBackgroundImage:tabBackground];
+    
+    /*UIImage *summaryBarItemBg = [UIImage imageNamed:@"grad.png"];
     UITabBar *tabbar = self.tabBarController.tabBar;
     UITabBarItem *item0 = [tabbar.items objectAtIndex:0];
     UITabBarItem *item1 = [tabbar.items objectAtIndex:1];
@@ -241,16 +251,13 @@
     UITabBarItem *item3 = [tabbar.items objectAtIndex:3];
     UITabBarItem *item4 = [tabbar.items objectAtIndex:4];
     
-    // show default level on TabBar
-    [self.tabBarController setSelectedIndex:0];
-    
     summaryBarItemBg = nil;
     
     [item0 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
     [item1 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
     [item2 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
     [item3 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
-    [item4 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];
+    [item4 setFinishedSelectedImage:summaryBarItemBg withFinishedUnselectedImage:summaryBarItemBg];//*/
     //*/
     
 	// Do any additional setup after loading the view, typically from a nib.

@@ -73,12 +73,19 @@
     self.courseLevelId = levelId;
     self.tableView.hidden = NO;
     
+    [self fetchedResultsController];
+    [self controllerWillChangeContent:self.fetchedResultsController];
     NSLog(@"LevelId %d", levelId);
 }
 
 - (void)hideLevelDetails
 {
     self.tableView.hidden = YES;
+}
+
+- (void)showDaysLeft
+{
+    
 }
 
 - (void)awakeFromNib
@@ -102,6 +109,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.detailViewController = (ReportCardDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     self.detailViewController.managedObjectContext = self.managedObjectContext;
+    
+    // set default course level
+    self.courseLevelId = 4;
+    [self.detailViewController setDefaultLevel:4];
+    
     // Set up the edit and add buttons.
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -234,9 +246,10 @@
     [fetchRequest setFetchBatchSize:20];
     
     
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", self.courseLevelId];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"levelId = %d", self.courseLevelId];
+//    NSLog(@"levelId = %d", self.courseLevelId);
 //        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", @"Test"];
-//    [fetchRequest setPredicate:predicate];
+    [fetchRequest setPredicate:predicate];
     
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"moduleCode" ascending:NO];
