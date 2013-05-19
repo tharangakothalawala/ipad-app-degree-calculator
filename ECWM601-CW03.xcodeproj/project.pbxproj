@@ -135,11 +135,11 @@
 				49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */,
 				49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */,
 				49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */,
-				C0B47F5217465AC900BD7DF5 /* CourseNamePopoverVIewController.h */,
-				C0B47F5317465AC900BD7DF5 /* CourseNamePopoverVIewController.m */,
 				49A54CE81742694B00FE3A59 /* Supporting Files */,
 				C0B47F5617466BDA00BD7DF5 /* DatePickerPopoverViewController.h */,
 				C0B47F5717466BDA00BD7DF5 /* DatePickerPopoverViewController.m */,
+				C0B47F5217465AC900BD7DF5 /* CourseNamePopoverVIewController.h */,
+				C0B47F5317465AC900BD7DF5 /* CourseNamePopoverVIewController.m */,
 			);
 			path = "ECWM601-CW03";
 			sourceTree = "<group>";
