@@ -73,6 +73,13 @@
 @synthesize assignment6View = _assignment6View;
 @synthesize assignmentPointer = _assignmentPointer;
 
+@synthesize assignment1DueDate = _assignment1DueDate;
+@synthesize assignment2DueDate = _assignment2DueDate;
+@synthesize assignment3DueDate = _assignment3DueDate;
+@synthesize assignment4DueDate = _assignment4DueDate;
+@synthesize assignment5DueDate = _assignment5DueDate;
+@synthesize assignment6DueDate = _assignment6DueDate;
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"datePickerPopover"]) {
@@ -127,7 +134,10 @@
 {
     // save module details
     [self editModuleDetails];
+    
 }
+
+
 
 - (IBAction)addAssignment:(id)sender
 {
@@ -186,8 +196,72 @@
 
 - (void)editAssignment1
 {
-    // show default level on TabBar
-    [self.tabBarController setSelectedIndex:0];
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment1Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment1Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment1Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment1DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment2
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment1Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment2Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment2Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment2DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment3
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment3Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment3Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment3Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment3DueDate];
+    [self.managedObjectContext save:nil];
+}
+- (void)editAssignment4
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment4Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment4Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment4Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment4DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment5
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment5Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment5Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment5Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment5DueDate];
+}
+
+- (void)editAssignment6
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment6Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment6Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment6Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment6DueDate];
+    [self.managedObjectContext save:nil];
 }
 
 - (void)editModuleDetails
@@ -199,7 +273,8 @@
 
 - (void)setDefaultLevel:(int) levelId
 {
-    
+    // show default level on TabBar
+    [self.tabBarController setSelectedIndex:0];
 }
 
 - (void)configureView

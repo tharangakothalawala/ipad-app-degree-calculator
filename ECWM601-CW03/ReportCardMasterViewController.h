@@ -34,5 +34,6 @@
 -(void) displayLevel:(int) levelId;
 -(void) hideLevelDetails;
 -(void) showDaysLeft;
+- (void)fetchLevelModules;
  
 @end

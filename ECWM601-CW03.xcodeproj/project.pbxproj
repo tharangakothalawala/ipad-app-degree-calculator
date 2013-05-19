@@ -84,6 +84,12 @@
 		0C40147D17436B1400EEBB67 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0C987A7D1747F3ED00FD8215 /* Assessment.h */,
+				0C987A7E1747F3ED00FD8215 /* Assessment.m */,
+				0C987A7A1747F3EC00FD8215 /* Module.h */,
+				0C987A7B1747F3EC00FD8215 /* Module.m */,
+				0C987A771747F3EC00FD8215 /* Course.h */,
+				0C987A781747F3EC00FD8215 /* Course.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -157,12 +163,6 @@
 		CE7A96A61744FD8C0017B0CB /* view */ = {
 			isa = PBXGroup;
 			children = (
-				0C987A7D1747F3ED00FD8215 /* Assessment.h */,
-				0C987A7E1747F3ED00FD8215 /* Assessment.m */,
-				0C987A7A1747F3EC00FD8215 /* Module.h */,
-				0C987A7B1747F3EC00FD8215 /* Module.m */,
-				0C987A771747F3EC00FD8215 /* Course.h */,
-				0C987A781747F3EC00FD8215 /* Course.m */,
 				CE7A96A81744FDAE0017B0CB /* SummaryView.h */,
 				CE7A96A91744FDAE0017B0CB /* SummaryView.m */,
 			);

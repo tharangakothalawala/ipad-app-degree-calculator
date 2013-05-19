@@ -74,7 +74,8 @@
     self.tableView.hidden = NO;
     
     [self fetchedResultsController];
-    [self controllerWillChangeContent:self.fetchedResultsController];
+    [self fetchLevelModules];
+    [self.tableView reloadData];
     NSLog(@"LevelId %d", levelId);
 }
 
@@ -235,33 +236,7 @@
         return __fetchedResultsController;
     }
     
-    // Set up the fetched results controller.
-    // Create the fetch request for the entity.
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Module" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"levelId = %d", self.courseLevelId];
-//    NSLog(@"levelId = %d", self.courseLevelId);
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", @"Test"];
-    [fetchRequest setPredicate:predicate];
-    
-    // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"moduleCode" ascending:NO];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
+    [self fetchLevelModules];
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
@@ -276,6 +251,40 @@
     
     return __fetchedResultsController;
 }    
+
+- (void)fetchLevelModules
+{
+    // Set up the fetched results controller.
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Module" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+//    
+//    NSMutableArray *mutableFetchResults = [[self.managedObjectContext 
+//                                            executeFetchRequest:fetchRequest error:&error] mutableCopy];
+//    
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"levelId = %d", self.courseLevelId];
+    //    NSLog(@"levelId = %d", self.courseLevelId);
+    //        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"moduleName = %@", @"Test"];
+//    [fetchRequest setPredicate:predicate];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"moduleCode" ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {

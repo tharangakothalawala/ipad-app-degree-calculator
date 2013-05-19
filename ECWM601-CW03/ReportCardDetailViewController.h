@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DatePickerPopoverViewController.h"
 #import "ReportCardMasterViewController.h"
+#import "Assessment.h"
 #import "Module.h"
 
 @interface ReportCardDetailViewController : UIViewController <UISplitViewControllerDelegate, UITabBarDelegate, DatePickerPopOverDelegate>
@@ -69,6 +70,12 @@
 
 // Summary View
 @property (weak, nonatomic) IBOutlet UIView *summaryView;
+@property (strong, nonatomic) NSDate *assignment1DueDate;
+@property (strong, nonatomic) NSDate *assignment2DueDate;
+@property (strong, nonatomic) NSDate *assignment3DueDate;
+@property (strong, nonatomic) NSDate *assignment4DueDate;
+@property (strong, nonatomic) NSDate *assignment5DueDate;
+@property (strong, nonatomic) NSDate *assignment6DueDate;
 
 - (void)setDefaultLevel:(int) levelId;
 
