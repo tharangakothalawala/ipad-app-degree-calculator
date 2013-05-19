@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C90902017450AE2000B5CA4 /* ReportCardLevelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C90901F17450AE1000B5CA4 /* ReportCardLevelDetailViewController.m */; };
 		0C987A751747F11400FD8215 /* grad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C987A741747F11400FD8215 /* grad.png */; };
 		0C987A791747F3EC00FD8215 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A781747F3EC00FD8215 /* Course.m */; };
 		0C987A7C1747F3ED00FD8215 /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C987A7B1747F3EC00FD8215 /* Module.m */; };
@@ -23,7 +22,6 @@
 		49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */; };
 		49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */; };
 		49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */; };
-		49A54D12174279AD00FE3A59 /* ReportCardCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A54D11174279AD00FE3A59 /* ReportCardCourseDetailViewController.m */; };
 		C0B47F5417465AC900BD7DF5 /* CourseNamePopoverVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B47F5317465AC900BD7DF5 /* CourseNamePopoverVIewController.m */; };
 		C0B47F5817466BDA00BD7DF5 /* DatePickerPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B47F5717466BDA00BD7DF5 /* DatePickerPopoverViewController.m */; };
 		CE7A96AA1744FDAE0017B0CB /* SummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A96A91744FDAE0017B0CB /* SummaryView.m */; };
@@ -31,8 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C90901E17450AE1000B5CA4 /* ReportCardLevelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCardLevelDetailViewController.h; sourceTree = "<group>"; };
-		0C90901F17450AE1000B5CA4 /* ReportCardLevelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCardLevelDetailViewController.m; sourceTree = "<group>"; };
 		0C987A741747F11400FD8215 /* grad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grad.png; sourceTree = SOURCE_ROOT; };
 		0C987A771747F3EC00FD8215 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		0C987A781747F3EC00FD8215 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
@@ -57,8 +53,6 @@
 		49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardMasterViewController.m; sourceTree = "<group>"; };
 		49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportCardDetailViewController.h; sourceTree = "<group>"; };
 		49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportCardDetailViewController.m; sourceTree = "<group>"; };
-		49A54D10174279AD00FE3A59 /* ReportCardCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCardCourseDetailViewController.h; sourceTree = "<group>"; };
-		49A54D11174279AD00FE3A59 /* ReportCardCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCardCourseDetailViewController.m; sourceTree = "<group>"; };
 		C0B47F5217465AC900BD7DF5 /* CourseNamePopoverVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseNamePopoverVIewController.h; sourceTree = "<group>"; };
 		C0B47F5317465AC900BD7DF5 /* CourseNamePopoverVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseNamePopoverVIewController.m; sourceTree = "<group>"; };
 		C0B47F5617466BDA00BD7DF5 /* DatePickerPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerPopoverViewController.h; sourceTree = "<group>"; };
@@ -140,10 +134,6 @@
 				49A54CFA1742694B00FE3A59 /* ReportCardMasterViewController.m */,
 				49A54CFC1742694B00FE3A59 /* ReportCardDetailViewController.h */,
 				49A54CFD1742694B00FE3A59 /* ReportCardDetailViewController.m */,
-				49A54D10174279AD00FE3A59 /* ReportCardCourseDetailViewController.h */,
-				49A54D11174279AD00FE3A59 /* ReportCardCourseDetailViewController.m */,
-				0C90901E17450AE1000B5CA4 /* ReportCardLevelDetailViewController.h */,
-				0C90901F17450AE1000B5CA4 /* ReportCardLevelDetailViewController.m */,
 				49A54CF61742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld */,
 				C0B47F5217465AC900BD7DF5 /* CourseNamePopoverVIewController.h */,
 				C0B47F5317465AC900BD7DF5 /* CourseNamePopoverVIewController.m */,
@@ -242,9 +232,7 @@
 				49A54CF81742694B00FE3A59 /* ECWM601_CW03.xcdatamodeld in Sources */,
 				49A54CFB1742694B00FE3A59 /* ReportCardMasterViewController.m in Sources */,
 				49A54CFE1742694B00FE3A59 /* ReportCardDetailViewController.m in Sources */,
-				49A54D12174279AD00FE3A59 /* ReportCardCourseDetailViewController.m in Sources */,
 				CE7A96AA1744FDAE0017B0CB /* SummaryView.m in Sources */,
-				0C90902017450AE2000B5CA4 /* ReportCardLevelDetailViewController.m in Sources */,
 				C0B47F5417465AC900BD7DF5 /* CourseNamePopoverVIewController.m in Sources */,
 				C0B47F5817466BDA00BD7DF5 /* DatePickerPopoverViewController.m in Sources */,
 				0C987A791747F3EC00FD8215 /* Course.m in Sources */,
