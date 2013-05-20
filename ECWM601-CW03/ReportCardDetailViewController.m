@@ -87,11 +87,17 @@
 
 @synthesize graphView = _graphView;
 @synthesize scoreList = _scoreList;
+@synthesize assessments = _assessments;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"datePickerPopover"]) {
         [[segue destinationViewController] setDelegate:self];
+        Assessment *assessment = [self.assessments objectAtIndex:self.dueDateIdentifier];
+        
+        if (assessment.assesmentDueDate != nil) {
+            [segue.destinationViewController setDatePickerDate:assessment.assesmentDueDate];
+        }
     }
 }
 
@@ -224,8 +230,10 @@
 
 - (void) setDueDate:(NSDate *) date
 {
+    [[self.assessments objectAtIndex:self.dueDateIdentifier] setAssesmentDueDate:date];
+    
     if (self.dueDateIdentifier == 1) {
-        //
+        
     } else if (self.dueDateIdentifier == 2) {
         
     }
@@ -237,10 +245,8 @@
 {
     // save module details
     [self editModuleDetails];
-    
+    [self editAssignments];
 }
-
-
 
 - (IBAction)addAssignment:(id)sender
 {
@@ -248,8 +254,6 @@
     if (self.assignmentPointer == 1 &&  !([self.textBoxAssignment1Title.text isEqualToString:@""])) {
         self.assignment2View.hidden = NO;
         self.assignmentPointer = 2;
-        
-        [self editAssignment1];
     } else if (self.assignmentPointer == 1) {
         [self.textBoxAssignment1Title becomeFirstResponder];
     }
@@ -305,8 +309,11 @@
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }
     
+    [self hideAssessments];
     [self showModuleDetails];
-    [self fetchAssignments];
+    self.assessments = [self fetchAssignments];
+    [self showAssesments];
+    
 }
 
 - (void)showModuleDetails
@@ -319,77 +326,6 @@
     
 }
 
-- (void)editAssignment1
-{
-    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
-                                                                         inManagedObjectContext:self.managedObjectContext];
-    [assessment setModule:self.module];
-    [assessment setAssesmentName:self.textBoxAssignment1Title.text];
-    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment1Wegiht.text intValue]]];
-    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment1Mark.text intValue]]];
-    [assessment setAssesmentDueDate:self.assignment1DueDate];
-    [self.managedObjectContext save:nil];
-}
-
-- (void)editAssignment2
-{
-    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
-                                                                         inManagedObjectContext:self.managedObjectContext];
-    [assessment setModule:self.module];
-    [assessment setAssesmentName:self.textBoxAssignment1Title.text];
-    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment2Wegiht.text intValue]]];
-    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment2Mark.text intValue]]];
-    [assessment setAssesmentDueDate:self.assignment2DueDate];
-    [self.managedObjectContext save:nil];
-}
-
-- (void)editAssignment3
-{
-    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
-                                                                         inManagedObjectContext:self.managedObjectContext];
-    [assessment setModule:self.module];
-    [assessment setAssesmentName:self.textBoxAssignment3Title.text];
-    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment3Wegiht.text intValue]]];
-    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment3Mark.text intValue]]];
-    [assessment setAssesmentDueDate:self.assignment3DueDate];
-    [self.managedObjectContext save:nil];
-}
-
-- (void)editAssignment4
-{
-    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
-                                                                         inManagedObjectContext:self.managedObjectContext];
-    [assessment setModule:self.module];
-    [assessment setAssesmentName:self.textBoxAssignment4Title.text];
-    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment4Wegiht.text intValue]]];
-    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment4Mark.text intValue]]];
-    [assessment setAssesmentDueDate:self.assignment4DueDate];
-    [self.managedObjectContext save:nil];
-}
-
-- (void)editAssignment5
-{
-    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
-                                                                         inManagedObjectContext:self.managedObjectContext];
-    [assessment setModule:self.module];
-    [assessment setAssesmentName:self.textBoxAssignment5Title.text];
-    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment5Wegiht.text intValue]]];
-    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment5Mark.text intValue]]];
-    [assessment setAssesmentDueDate:self.assignment5DueDate];
-}
-
-- (void)editAssignment6
-{
-    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment" 
-                                                                         inManagedObjectContext:self.managedObjectContext];
-    [assessment setModule:self.module];
-    [assessment setAssesmentName:self.textBoxAssignment6Title.text];
-    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment6Wegiht.text intValue]]];
-    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment6Mark.text intValue]]];
-    [assessment setAssesmentDueDate:self.assignment6DueDate];
-    [self.managedObjectContext save:nil];
-}
-
 - (void)editModuleDetails
 {
     self.module.moduleName = self.textBoxModuleTitle.text;
@@ -397,10 +333,45 @@
     [self.managedObjectContext save:nil];
 }
 
+- (void)showAssesments
+{
+    for (int i = 0; i < [self.assessments count]; i++) {
+
+        switch (i) {
+            case 0:
+                [self showAssessment1:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 1:
+                [self showAssessment2:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 2:
+                [self showAssessment3:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 3:
+                [self showAssessment4:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 4:
+                [self showAssessment5:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 5:
+                [self showAssessment6:[self.assessments objectAtIndex:i]];
+                break;
+        }
+    }
+    
+    [self.buttonAddAssignment setEnabled:YES];
+//    self.textBoxAssigment1Dates.text = [assessment assesmentDueDate];
+}
+
 - (NSMutableArray *)fetchAssignments
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Assessment"];
-    //fetchRequest.sortDescriptors = @[NSSortDescriptor sortDescriptorWithKey:@"assessmentId" ascending:YES]]; // TODO
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"assessmentId" ascending:YES]];
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"module = %@", self.module];
     
     NSError *error;
@@ -424,6 +395,167 @@
     }
 }
 
+
+- (void)editAssignments
+{
+    for (int i = 0; i < [self.assessments count]; i++) {
+        
+        switch (i) {
+            case 0:
+                [self editAssignment1];
+                break;
+                
+            case 1:
+                [self editAssignment2];
+                break;
+                
+            case 2:
+                [self editAssignment3];
+                break;
+                
+            case 3:
+                [self editAssignment4];
+                break;
+                
+            case 4:
+                [self editAssignment5];
+                break;
+                
+            case 5:
+                [self editAssignment6];
+                break;
+        }
+    }
+}
+
+- (void)editAssignment1
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment"
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment1Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment1Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment1Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment1DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment2
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment"
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment1Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment2Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment2Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment2DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment3
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment"
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment3Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment3Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment3Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment3DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment4
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment"
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment4Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment4Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment4Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment4DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)editAssignment5
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment"
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment5Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment5Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment5Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment5DueDate];
+}
+
+- (void)editAssignment6
+{
+    Assessment *assessment = (Assessment *)[NSEntityDescription insertNewObjectForEntityForName:@"Assessment"
+                                                                         inManagedObjectContext:self.managedObjectContext];
+    [assessment setModule:self.module];
+    [assessment setAssesmentName:self.textBoxAssignment6Title.text];
+    [assessment setAssesmentWeight:[NSNumber numberWithInt:[self.textBoxAssignment6Wegiht.text intValue]]];
+    [assessment setAssignmentMark:[NSNumber numberWithInt:[self.textBoxAssigment6Mark.text intValue]]];
+    [assessment setAssesmentDueDate:self.assignment6DueDate];
+    [self.managedObjectContext save:nil];
+}
+
+- (void)showAssessment1:(Assessment *)assessment
+{
+    self.textBoxAssignment1Title.text = [assessment assesmentName];
+    self.textBoxAssignment1Wegiht.text = [[assessment assesmentWeight] stringValue];
+    self.textBoxAssigment1Mark.text = [[assessment assignmentMark] stringValue];
+}
+
+- (void)showAssessment2:(Assessment *)assessment
+{
+    self.textBoxAssignment2Title.text = [assessment assesmentName];
+    self.textBoxAssignment2Wegiht.text = [[assessment assesmentWeight] stringValue];
+    self.textBoxAssigment2Mark.text = [[assessment assignmentMark] stringValue];
+    self.assignment2View.hidden = NO;
+}
+
+- (void)showAssessment3:(Assessment *)assessment
+{
+    self.textBoxAssignment3Title.text = [assessment assesmentName];
+    self.textBoxAssignment3Wegiht.text = [[assessment assesmentWeight] stringValue];
+    self.textBoxAssigment3Mark.text = [[assessment assignmentMark] stringValue];
+    self.assignment3View.hidden = NO;
+}
+
+- (void)showAssessment4:(Assessment *)assessment
+{
+    self.textBoxAssignment4Title.text = [assessment assesmentName];
+    self.textBoxAssignment4Wegiht.text = [[assessment assesmentWeight] stringValue];
+    self.textBoxAssigment4Mark.text = [[assessment assignmentMark] stringValue];
+    self.assignment4View.hidden = NO;
+}
+
+- (void)showAssessment5:(Assessment *)assessment
+{
+    self.textBoxAssignment5Title.text = [assessment assesmentName];
+    self.textBoxAssignment5Wegiht.text = [[assessment assesmentWeight] stringValue];
+    self.textBoxAssigment5Mark.text = [[assessment assignmentMark] stringValue];
+    self.assignment5View.hidden = NO;
+}
+
+- (void)showAssessment6:(Assessment *)assessment
+{
+    self.textBoxAssignment6Title.text = [assessment assesmentName];
+    self.textBoxAssignment6Wegiht.text = [[assessment assesmentWeight] stringValue];
+    self.textBoxAssigment6Mark.text = [[assessment assignmentMark] stringValue];
+    self.assignment6View.hidden = NO;
+}
+
+- (void)hideAssessments
+{
+    // hiding the assignment areas
+    self.assignment2View.hidden = YES;
+    self.assignment3View.hidden = YES;
+    self.assignment4View.hidden = YES;
+    self.assignment5View.hidden = YES;
+    self.assignment6View.hidden = YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -437,12 +569,8 @@
     [super viewDidLoad];
     self.courseTabBar.delegate = self;
     self.assignmentPointer = 1;
-    // hiding the assignment areas
-    self.assignment2View.hidden = YES;
-    self.assignment3View.hidden = YES;
-    self.assignment4View.hidden = YES;
-    self.assignment5View.hidden = YES;
-    self.assignment6View.hidden = YES;
+
+    [self hideAssessments];
     
     self.masterViewController = (ReportCardMasterViewController *)[[self.splitViewController.viewControllers objectAtIndex:0] topViewController];
 

@@ -22,6 +22,11 @@
     return self;
 }
 
+- (void)setDatePickerDate:(NSDate *) dueDate;
+{
+    self.datePickerDueDate.date = dueDate;
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.

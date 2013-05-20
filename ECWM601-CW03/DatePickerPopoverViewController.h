@@ -20,4 +20,6 @@
 @property (nonatomic, weak) IBOutlet id <DatePickerPopOverDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerDueDate;
 
+- (void)setDatePickerDate:(NSDate *) dueDate;
+
 @end
