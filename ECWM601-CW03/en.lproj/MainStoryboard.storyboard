@@ -616,6 +616,8 @@
                         <outlet property="courseTabBar" destination="isg-5Y-bjR" id="iLq-T8-eJf"/>
                         <outlet property="datesBarItem" destination="XkQ-1n-fPM" id="b2H-vD-NMw"/>
                         <outlet property="labelAwardPredictionResult" destination="0ia-kl-mUI" id="p6B-f4-TvO"/>
+                        <outlet property="labelBest7FromLevel5And6" destination="qum-2t-dwx" id="bEC-VV-qIo"/>
+                        <outlet property="labelBest7FromLevel6" destination="2ib-bd-vMq" id="Zob-hT-ewx"/>
                         <outlet property="labelFinalModuleMark" destination="N4f-QK-OMG" id="EnG-w4-bGn"/>
                         <outlet property="labelLevel4Average" destination="72A-xX-hgw" id="ijn-Jx-b9o"/>
                         <outlet property="labelLevel5Average" destination="Ga1-32-PrQ" id="E0U-hq-J1H"/>
@@ -936,6 +938,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="datesBarItem" candidateClass="UITabBarItem"/>
                 <relationship kind="outlet" name="graphView" candidateClass="SummaryView"/>
                 <relationship kind="outlet" name="labelAwardPredictionResult" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBest7FromLevel5And6" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBest7FromLevel6" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelFinalModuleMark" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLevel4Average" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLevel5Average" candidateClass="UILabel"/>
@@ -996,6 +1000,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RHR-bL-6Bi"/>
+        <segue reference="IUp-Ru-xi0"/>
     </inferredMetricsTieBreakers>
 </document>

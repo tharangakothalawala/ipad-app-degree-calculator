@@ -84,6 +84,8 @@
 @synthesize labelLevel5Average = _labelLevel5Average;
 @synthesize labelLevel6Average = _labelLevel6Average;
 @synthesize labelAwardPredictionResult = _labelAwardPredictionResult;
+@synthesize labelBest7FromLevel6 = _labelBest7FromLevel6;
+@synthesize labelBest7FromLevel5And6 = _labelBest7FromLevel5And6;
 
 @synthesize graphView = _graphView;
 @synthesize scoreList = _scoreList;
@@ -635,6 +637,21 @@
     item2.image = [UIImage imageNamed:@"level6.png"];
     item3.image = [UIImage imageNamed:@"dates.png"];
     item4.image = [UIImage imageNamed:@"summary_graduation.png"];
+    
+    self.textBoxAssigment1Dates.text = @"";
+    self.textBoxAssigment2Dates.text = @"";
+    self.textBoxAssigment3Dates.text = @"";
+    self.textBoxAssigment4Dates.text = @"";
+    self.textBoxAssigment5Dates.text = @"";
+    self.textBoxAssigment6Dates.text = @"";
+    
+    self.labelLevel4Average.text = @"";
+    self.labelLevel5Average.text = @"";
+    self.labelLevel6Average.text = @"";
+    self.labelAwardPredictionResult.text = @"";
+    self.labelFinalModuleMark.text = @"";
+    self.labelBest7FromLevel6.text = @"";
+    self.labelBest7FromLevel5And6.text = @"";
 
     
     self.summaryView.hidden = YES;
@@ -693,6 +710,8 @@
     [self setLabelLevel5Average:nil];
     [self setLabelLevel6Average:nil];
     [self setLabelAwardPredictionResult:nil];
+    [self setLabelBest7FromLevel6:nil];
+    [self setLabelBest7FromLevel5And6:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
