@@ -125,7 +125,7 @@
     } else if ([string isEqualToString:@"Dates"])
     {
         self.summaryView.hidden = YES;
-        [self.masterViewController showDaysLeft];
+        [self showDaysLeft];
         NSLog(@"Dates");
     } else if ([string isEqualToString:@"Summary"])
     {
@@ -228,8 +228,56 @@
     
 }
 
+- (void)showDaysLeft
+{
+    NSDate *assessmentDueDate;
+//    NSDate *currentDate = [[NSDate date] descriptionWithLocale:currentLocale];
+    
+    for (int i = 0; i < [self.assessments count]; i++) {
+        
+        switch (i) {
+            case 0:
+                assessmentDueDate = [[self.assessments objectAtIndex:i] assesmentDueDate];
+                int numberOfDays = [self calculateDaysLeft:assessmentDueDate];
+                break;
+                
+            case 1:
+                [self showAssessment2:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 2:
+                [self showAssessment3:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 3:
+                [self showAssessment4:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 4:
+                [self showAssessment5:[self.assessments objectAtIndex:i]];
+                break;
+                
+            case 5:
+                [self showAssessment6:[self.assessments objectAtIndex:i]];
+                break;
+        }
+    }
+}
+
+- (int) calculateDaysLeft:(NSDate *) dueDate
+{
+    NSDate* currentDate = [NSDate date];
+    
+    NSTimeInterval secondsBetween = [currentDate timeIntervalSinceDate:dueDate];
+    int numberOfDays = secondsBetween / 56400;
+
+    return numberOfDays;
+}
+
 - (void) setDueDate:(NSDate *) date
 {
+    NSLog(@"%@", date);
+    NSLog(@"%@", [self.assessments objectAtIndex:self.dueDateIdentifier]);
     [[self.assessments objectAtIndex:self.dueDateIdentifier] setAssesmentDueDate:date];
     
     if (self.dueDateIdentifier == 1) {
@@ -238,7 +286,7 @@
         
     }
     NSLog(@"%d", self.dueDateIdentifier);
-    NSLog(@"%@", (NSString *)date);
+    NSLog(@"%@", [self.assessments objectAtIndex:self.dueDateIdentifier]);
 }
 
 - (IBAction)moduleDetailSave:(id)sender 
@@ -371,7 +419,8 @@
 - (NSMutableArray *)fetchAssignments
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Assessment"];
-    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"assessmentId" ascending:YES]];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"assessmentId" ascending:YES];
+    fetchRequest.sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     fetchRequest.predicate = [NSPredicate predicateWithFormat:@"module = %@", self.module];
     
     NSError *error;

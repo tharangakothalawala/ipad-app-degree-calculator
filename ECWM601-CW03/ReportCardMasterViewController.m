@@ -71,6 +71,7 @@
 - (void) displayLevel:(int) levelId
 {
     self.courseLevelId = levelId;
+    self.levelNameLabel.text = [NSString stringWithFormat:@"Level %d Modules", levelId];
     self.tableView.hidden = NO;
     
     [self fetchedResultsController];
@@ -82,11 +83,6 @@
 - (void)hideLevelDetails
 {
     self.tableView.hidden = YES;
-}
-
-- (void)showDaysLeft
-{
-    
 }
 
 - (void)awakeFromNib
@@ -114,6 +110,7 @@
     // set default course level
     self.courseLevelId = 4;
     [self.detailViewController setDefaultLevel:4];
+    self.levelNameLabel.text = [NSString stringWithFormat:@"Level %d Modules", 4];
     
     // Set up the edit and add buttons.
     //self.navigationItem.leftBarButtonItem = self.editButtonItem;

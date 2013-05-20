@@ -90,5 +90,23 @@
 
 - (void)setDefaultLevel:(int) levelId;
 - (NSMutableArray *)fetchAssignments;
+- (void)showDaysLeft;
+- (int) calculateDaysLeft:(NSDate *) dueDate;
+- (void)showAssessment1:(Assessment *)assessment;
+- (void)showAssessment2:(Assessment *)assessment;
+- (void)showAssessment3:(Assessment *)assessment;
+- (void)showAssessment4:(Assessment *)assessment;
+- (void)showAssessment5:(Assessment *)assessment;
+- (void)showAssessment6:(Assessment *)assessment;
+- (void)editAssignments;
+- (void)hideAssessments;
+- (void)showAssesments;
+
+- (void)editAssignment1;
+- (void)editAssignment2;
+- (void)editAssignment3;
+- (void)editAssignment4;
+- (void)editAssignment5;
+- (void)editAssignment6;
 
 @end
